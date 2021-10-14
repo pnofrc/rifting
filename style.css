@@ -1,14 +1,20 @@
 @font-face {
-    font-family: "CothamSans";
-    src: url("./assets/fonts/CothamSans.otf");
+    font-family: 'cantique';
+    src: url('fonts/Cantique-Normal.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'commune';
+    src: url('fonts/Commune-Nuit_Debout_Pochoir_web.woff') format('woff');
 }
 
 :root {
-    font-family: 'Courier New', Courier, monospace;
-    --reg: 2vw;
+    font-family: 'commune';
+    --reg: 4vw;
     --tit: 6vw;
-    --darker: #2F2842;
-    --lighter: #26BFB3;
+    --back: white;
+    --lighter: #0D291B;
+    --darker: #07F79B;
 }
 
 * {
@@ -21,18 +27,21 @@ html {
 }
 
 body {
-    background-color: #494464;
+    background-color: var(--back);
     margin: 0;
     width: 1000vw;
     height: 500vw;
     z-index: 1000;
+    line-height: var(--reg);
 }
 
 #logo {
     position: fixed;
-    width: 10%;
-    right: 60px;
-    bottom: 60px;
+    z-index: 100000;
+    width: 15%;
+    right: 30px;
+    bottom: 20px;
+    filter: drop-shadow(0 0 0.75rem var(--lighter));
 }
 
 iframe {
@@ -57,6 +66,64 @@ div {
     display: inline;
     bottom: 0;
     font-size: var(--reg);
+    letter-spacing: .4vw;
+}
+
+.start {
+    color: var(--lighter);
+    display: inline;
+    position: absolute;
+    top: 5vw;
+    left: 25vw;
+    animation: shake infinite;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    font-size: var(--reg);
+    line-height: 4vw
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+    }
+    10%,
+    30% {
+        -webkit-transform: translateY(5px);
+    }
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30% {
+        transform: translateY(5px);
+    }
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateY(-10px);
+    }
 }
 
 .uno {
@@ -79,31 +146,21 @@ div {
 
 .quattro {
     position: absolute;
-    top: 50vw;
+    top: 300vw;
     left: 750vw
 }
 
 .cinque {
     position: absolute;
     top: 10vw;
-    left: 800vw
+    left: 950vw
 }
 
 p,
 a {
     font-size: var(--reg);
-}
-
-a {
     color: var(--lighter);
-    /* text-decoration: underline; */
-    /* text-decoration-color: var(--pink); */
-    /* -webkit-text-decoration-color:var(--pink); */
     text-shadow: 10px 10px 4px rgba(51, 255, 0, 0.1)
-}
-
-p {
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1)
 }
 
 button {
@@ -133,9 +190,9 @@ button {
 }
 
 a button {
-    font-family: "HKGrotesk";
+    font-family: 'commune';
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     color: var(--pink);
 }
 

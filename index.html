@@ -21,18 +21,29 @@
 
     <img id="logo" src="tw5_logo.png">
 
-    <div>
+    <div class="start">
         <a id="start" href="">Rifting</a>
+        <br> n.
+        <ol>
+            <li>A fissure, crack, or opening, as in rock.</li>
+            <li>A break in friendly relations: <i>a rift between siblings.</i></li>
+            <li>Geliogy An area where the lithosphere is thinning, typically associated with large faults and grabens.</li>
+        </ol>
+        <i>v.</i><b>      rift·ed, rift·ing, rifts</b><br>
+        <i>v.intr</i> To split open; break.<br>
+        <i>v.tr.</i> To cause to split open or break.<br>
     </div>
 
     <div class="frame"></div>
 
     <div class="menu">
+        <b>
         <a href="#uno" id="#">La prima frase,</a><br>
         <a href="#due" id="#">è sempre la più incisiva</a><br>
         <a href="#tre" id="#">poi ti ritrovi un topo che</a><br>
         <a href="#quattro" id="#">ti prova un enjambement</a><br>
         <a href="#cinque" id="#">cazzo! Nel mentre ha rubato le patate...</a>
+    </b>
     </div>
 
     <div class="uno">
@@ -74,11 +85,9 @@
         links.forEach(link => {
             var href = link.getAttribute('href');
             if (link.getAttribute('href').startsWith('#')) {
-                // console.log('addingClickHandler',link);
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     var dest = document.getElementById(href.substring(1)).parentNode;
-                    // console.log('click', href, dest)
                     dest.scrollIntoView({
                         behavior: "smooth",
                         block: "center",
