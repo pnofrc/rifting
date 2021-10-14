@@ -33,6 +33,7 @@ body {
     height: 500vw;
     z-index: 1000;
     line-height: var(--reg);
+    /* background-image: repeating-linear-gradient( #218541, #2fac7d, #32d5bb, #24fffd); */
 }
 
 #logo {
@@ -67,6 +68,7 @@ div {
     bottom: 0;
     font-size: var(--reg);
     letter-spacing: .4vw;
+    filter: drop-shadow(0 0 0.75rem var(--darker));
 }
 
 .start {
@@ -152,8 +154,8 @@ div {
 
 .cinque {
     position: absolute;
-    top: 10vw;
-    left: 950vw
+    top: 20vw;
+    left: 900vw
 }
 
 p,
@@ -171,14 +173,12 @@ button {
     display: inline-block;
     margin: 0 .5vw;
     min-width: 10vw;
-    /* min-height: 2.5vw; */
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50px;
     text-decoration: none;
     margin-bottom: 1vw;
     padding: .5vw 1vw;
-    box-shadow: 5px 5px 10px rgba(130, 130, 130, 0.7);
-    /* box-shadow: 5px 8px 30px var(--pink);  */
+    filter: drop-shadow(0 0 0.75rem var(--lighter));
 }
 
 .testa {
