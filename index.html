@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="ico.png">
+</head>
+
+<body>
+
+    <div class='testa'>
+        <a href="#start" id=""><button>Go Start</button></a>
+
+    </div>
+
+    <img id="logo" src="tw5_logo.png">
+
+    <div>
+        <a id="start" href="">Rifting</a>
+    </div>
+
+    <div class="frame"></div>
+
+    <div class="menu">
+        <a href="#uno" id="">test</a><br>
+        <a href="#due" id="">test</a><br>
+        <a href="#tre" id="">test</a><br>
+        <a href="#quattro" id="">test</a><br>
+        <a href="#cinque" id="">test</a>
+    </div>
+
+    <div class="uno">
+        <a id="uno" href=""></a>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+    </div>
+
+    <div class="due">
+        <a id="due" href=""></a>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+    </div>
+
+    <div class="tre">
+        <a id="tre" href=""></a>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+    </div>
+
+    <div class="quattro">
+        <a id="quattro" href=""></a>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+    </div>
+
+    <div class="cinque">
+        <a id="cinque" href=""></a>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" width="640" height="332" frameborder="50" allowfullscreen></iframe>
+    </div>
+
+
+
+    <script>
+        var links = document.querySelectorAll('a');
+        links = Array.prototype.slice.call(links);
+
+        links.forEach(link => {
+            var href = link.getAttribute('href');
+            if (link.getAttribute('href').startsWith('#')) {
+                // console.log('addingClickHandler',link);
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var dest = document.getElementById(href.substring(1)).parentNode;
+                    // console.log('click', href, dest)
+                    dest.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                        inline: "center"
+                    });
+                })
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>

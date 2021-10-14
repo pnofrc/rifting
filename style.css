@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "CothamSans";
+    src: url("./assets/fonts/CothamSans.otf");
+}
+
+:root {
+    font-family: 'Courier New', Courier, monospace;
+    --reg: 4vw;
+    --tit: 6vw;
+    --green: #00ff00;
+    --pink: #ff14d0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 1000vw;
+    height: 500vw;
+    z-index: 1000;
+}
+
+#logo {
+    position: fixed;
+    width: 10%;
+    right: 60px;
+    bottom: 60px;
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+}
+
+iframe {
+    margin: 0 1vw
+}
+
+div {
+    display: flex;
+}
+
+.frame {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    border: 3vw black solid;
+}
+
+.menu {
+    position: fixed;
+    display: inline;
+}
+
+.uno {
+    position: absolute;
+    top: 50vw;
+    left: 200vw
+}
+
+.due {
+    position: absolute;
+    top: 400vw;
+    left: 900vw
+}
+
+.tre {
+    position: absolute;
+    top: 200vw;
+    left: 300vw
+}
+
+.quattro {
+    position: absolute;
+    top: 50vw;
+    left: 750vw
+}
+
+.cinque {
+    position: absolute;
+    top: 10vw;
+    left: 800vw
+}
+
+p,
+a {
+    font-size: var(--reg);
+}
+
+a {
+    color: var(--green);
+    /* text-decoration: underline; */
+    /* text-decoration-color: var(--pink); */
+    /* -webkit-text-decoration-color:var(--pink); */
+    text-shadow: 10px 10px 4px rgba(51, 255, 0, 0.1)
+}
+
+p {
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1)
+}
+
+button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    margin: 0 .5vw;
+    min-width: 10vw;
+    /* min-height: 2.5vw; */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 1vw;
+    padding: .5vw 1vw;
+    box-shadow: 5px 5px 10px rgba(130, 130, 130, 0.7);
+    /* box-shadow: 5px 8px 30px var(--pink);  */
+}
+
+.testa {
+    z-index: 100;
+    top: 1.5vw;
+    left: 1vw;
+    height: 0;
+    position: fixed;
+}
+
+#lefty {
+    color: var(--green);
+}
+
+a button {
+    font-family: "HKGrotesk";
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: var(--pink);
+}
+
+#descriptio {
+    width: 13%;
+    margin: 5% 0 0 10%;
+    z-index: 20;
+    border: var(--pink) solid 3px;
+    background-color: rgba(255, 0, 242, 0.8);
+    box-shadow: 10px 10px 20px rgba(130, 130, 130, 0.7)
+}
+
+#descriptio p {
+    padding: 0 1vw;
+    font-size: 2vw;
+    color: white;
+    text-shadow: none;
+}
+
+#descriptio a {
+    padding: 0 1vw;
+    font-size: 2vw;
+    color: var(--green);
+    text-shadow: none;
+}
+
+#telegram {
+    width: 9%;
+    margin: 3% 0 0 20%;
+    z-index: 20;
+    border: var(--pink) solid 3px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 10px 20px rgba(255, 0, 242, 0.8);
+}
+
+#telegram p {
+    padding: 0 1vw;
+    font-size: 2vw;
+    color: var(--pink);
+    text-shadow: none;
+}
+
+#telegram a {
+    padding: 0 1vw;
+    font-size: 2vw;
+    color: var(--green);
+    text-shadow: none;
+}
+
+#descriptio button {
+    font-size: 1vw;
+    margin-top: 1vw;
+    /* text-align: center; */
+    color: var(--pink);
+    margin: 0 1vw 2vw 1vw;
+}
+
+#telegram button {
+    font-size: 1vw;
+    margin: 2vw 0 0 0;
+    /* text-align: center; */
+    color: var(--pink);
+    bottom: 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+     :root {
+        --reg: 6vw;
+    }
+}
