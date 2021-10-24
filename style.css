@@ -1,272 +1,650 @@
-        @font-face {
-            font-family: 'cantique';
-            src: url('fonts/Cantique-Normal.woff') format('woff');
-        }
-        
-        @font-face {
-            font-family: 'commune';
-            src: url('fonts/Commune-Nuit_Debout_Pochoir_web.woff') format('woff');
-        }
-        
-         :root {
-            font-family: 'commune';
-            --reg: 4vw;
-            --tit: 6vw;
-            --back: white;
-            --lighter: #0D291B;
-            --darker: #07f79b;
-            --active: #4EF1AE;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        html {
-            margin: 0;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            background-color: var(--back);
-            margin: 0;
-            width: 1000vw;
-            height: 500vw;
-            z-index: 1000;
-            line-height: var(--reg);
-            /* background-image: repeating-linear-gradient( #218541, #2fac7d, #32d5bb, #24fffd); */
-        }
-        
-        a:active {
-            color: var(--active)
-        }
-        
-        a:hover {
-            color: var(--active)
-        }
-        
-        #logo {
-            position: fixed;
-            z-index: 100000;
-            width: 15%;
-            right: 30px;
-            bottom: 20px;
-            filter: drop-shadow(0 0 0.75rem var(--lighter));
-        }
-        
-        iframe {
-            margin: 0 1vw;
-        }
-        
-        div {
-            display: flex;
-        }
-        
-        .frame {
-            top: 0;
-            left: 0;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            border: 3vw var(--darker) solid;
-        }
-        
-        .menu {
-            z-index: 999999999;
-            position: fixed;
-            display: inline;
-            bottom: 0;
-            font-size: var(--reg);
-            letter-spacing: .8vw;
-            line-height: 150px;
-            /* filter: drop-shadow(0 0 2.75rem var(--darker)); */
-        }
-        
-        .start {
-            margin-left: 20%;
-            color: var(--lighter);
-            display: inline;
-            position: absolute;
-            top: 5vw;
-            left: 25vw;
-            animation: shake infinite;
-            -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-            font-size: var(--reg);
-            line-height: 4vw
-        }
-        
-        @keyframes shake {
-            0%,
-            100% {
-                -webkit-transform: translateX(0);
-            }
-            10%,
-            30% {
-                -webkit-transform: translateY(5px);
-            }
-            50%,
-            70%,
-            90% {
-                -webkit-transform: translateX(-10px);
-            }
-            20%,
-            40%,
-            60%,
-            80% {
-                -webkit-transform: translateY(-10px);
-            }
-        }
-        
-        @keyframes shake {
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-            10%,
-            30% {
-                transform: translateY(5px);
-            }
-            50%,
-            70%,
-            90% {
-                transform: translateX(-10px);
-            }
-            20%,
-            40%,
-            60%,
-            80% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        .uno {
-            position: absolute;
-            top: 50vw;
-            left: 200vw
-        }
-        
-        .due {
-            position: absolute;
-            top: 400vw;
-            left: 900vw
-        }
-        
-        .tre {
-            position: absolute;
-            top: 200vw;
-            left: 300vw
-        }
-        
-        .quattro {
-            position: absolute;
-            top: 300vw;
-            left: 750vw
-        }
-        
-        .cinque {
-            position: absolute;
-            top: 20vw;
-            left: 800vw
-        }
-        
-        .sei {
-            position: absolute;
-            top: 400vw;
-            left: 100vw
-        }
-        
-        p,
-        a {
-            font-size: var(--reg);
-            color: var(--lighter);
-            text-shadow: 10px 10px 4px rgba(51, 255, 0, 0.1)
-        }
-        
-        button {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            display: inline-block;
-            margin: 0 .5vw;
-            min-width: 10vw;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 50px;
-            text-decoration: none;
-            margin-bottom: 1vw;
-            padding: .5vw 1vw;
-            filter: drop-shadow(0 0 0.75rem var(--lighter));
-        }
-        
-        .testa {
-            z-index: 100;
-            top: 1.5vw;
-            left: 1vw;
-            height: 0;
-            position: fixed;
-        }
-        
-        a button {
-            font-family: 'commune';
-            text-decoration: none;
-            font-size: 2.5vw;
-            color: var(--pink);
-        }
-        
-        .colophon {
-            display: none;
-            z-index: 9999999999999;
-            border: solid 1px green;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            background-color: black;
-            color: var(--darker);
-            font-size: 10vw;
-        }
-        
-        .colophon div {
-            display: inline;
-            /* position: absolute; */
-        }
-        
-        .colophon li,
-        p,
-        ul {
-            font-size: 5vw;
-            line-height: 1vw;
-        }
-        
-        .colophon p {
-            color: white;
-        }
-        
-        .colophon button {
-            /* width: 500vw; */
-            font-size: 600px;
-        }
-        
-        @media only screen and (max-width: 600px) {
-             :root {
-                --reg: 150px;
-            }
-            #logo {
-                width: 160px;
-                top: 0;
-                right: 0;
-            }
-            .frame {
-                border: solid var(--darker) 20px;
-                width: 27%;
-                height: 27%;
-            }
-            div {
-                flex-direction: column;
-            }
-            .start {
-                margin-top: 20%;
-                width: 1000%;
-                line-height: 100%;
-            }
-        }
+                        @font-face {
+                            font-family: 'cantique';
+                            src: url('fonts/Cantique-Normal.woff') format('woff');
+                        }
+                        
+                        @font-face {
+                            font-family: 'commune';
+                            src: url('fonts/Gulax-Regular.woff') format('woff');
+                        }
+                        
+                         :root {
+                            font-family: 'commune';
+                            --reg: 2.5vw;
+                            --tito: 15vw;
+                            --back: #D6D3D8;
+                            --lighter: rgb(19, 6, 27);
+                            --darker: #13051b;
+                            --active: #4EF1AE;
+                            --tit: rgba(59, 53, 53, 0.308);
+                            --info: rgb(66, 64, 64);
+                            --cred: rgb(19, 18, 18);
+                        }
+                        
+                        * {
+                            box-sizing: border-box;
+                        }
+                        
+                        html {
+                            margin: 0;
+                            scroll-behavior: smooth;
+                        }
+                        
+                         ::-webkit-scrollbar {
+                            display: none;
+                            visibility: hidden;
+                        }
+                        
+                         ::-webkit-scrollbar-track-piece {
+                            visibility: hidden;
+                        }
+                        
+                        body {
+                            background-color: var(--back);
+                            margin: 0;
+                            width: 1000vw;
+                            height: 500vw;
+                            line-height: var(--reg);
+                        }
+                        
+                        a:active {
+                            color: var(--active)
+                        }
+                        
+                        a:hover {
+                            color: var(--active)
+                        }
+                        
+                        #logo {
+                            position: fixed;
+                            z-index: 300;
+                            width: 15%;
+                            right: 2vw;
+                            bottom: 1vw;
+                            filter: drop-shadow(0 0 0.75rem var(--lighter));
+                        }
+                        
+                        #logo2 {
+                            position: fixed;
+                            z-index: 300;
+                            width: 15%;
+                            right: 4vw;
+                            top: 6vw;
+                            filter: drop-shadow(0 0 0.75rem var(--lighter));
+                        }
+                        
+                        iframe {
+                            /* margin-top: 2vw; */
+                            /* padding: 30px; */
+                            z-index: 200;
+                            /* border: 10px beige solid; */
+                            border: none;
+                            width: 45vw;
+                            /* height: 50vh; */
+                        }
+                        
+                        .dx iframe {
+                            max-height: 55%;
+                        }
+                        
+                        .sx iframe {
+                            max-height: 40%;
+                        }
+                        
+                        .desktop {
+                            background-color: var(--back);
+                        }
+                        
+                        .box {
+                            /* background-color: var(--back); */
+                            /* border: 10px blue solid; */
+                            max-height: 95vw;
+                            max-width: 95vw;
+                            justify-content: center;
+                            z-index: 120;
+                        }
+                        
+                        .vids {
+                            display: flex;
+                            flex-direction: row;
+                        }
+                        
+                        .dx,
+                        .sx {
+                            /* border: solid; */
+                            max-height: 70vh;
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0;
+                            /* object-fit: contain; */
+                            /* justify-content: center; */
+                        }
+                        
+                        .titoloni {
+                            /* border: solid 2px red; */
+                            width: 100%;
+                            margin-top: 2.5vw;
+                            height: 6vw;
+                            position: relative;
+                            /* border: solid; */
+                            padding-bottom: 8vw;
+                        }
+                        
+                        .box a {
+                            text-decoration: none;
+                        }
+                        
+                        .titoloni p {
+                            text-align: center;
+                            font-size: 7vw;
+                            margin: 0;
+                            color: var(--back);
+                            filter: drop-shadow(0 0 1.75rem rgb(22, 22, 22));
+                        }
+                        
+                        .testini {
+                            display: flex;
+                            flex-direction: column;
+                            height: 20vw;
+                            position: absolute;
+                            bottom: 9vw;
+                            padding: 3%;
+                            margin-bottom: 0;
+                            width: 50%;
+                        }
+                        
+                        .testini span {
+                            text-align: center;
+                            line-height: 2vw;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        
+                        .tit {
+                            font-size: 25px;
+                            color: var(--tit);
+                        }
+                        
+                        .info {
+                            font-size: 10px;
+                            color: var(--info);
+                        }
+                        
+                        .cred {
+                            font-size: 15px;
+                            color: var(--cred);
+                        }
+                        
+                        .frame {
+                            background-origin: padding-box;
+                            filter: drop-shadow(0 0 3.75rem rgb(0, 0, 0));
+                            top: 0;
+                            left: 0;
+                            position: fixed;
+                            width: 100%;
+                            height: 100%;
+                            border: 1.5vw var(--lighter) solid;
+                            z-index: 10;
+                        }
+                        
+                        .start {
+                            /* border: 1px red solid; */
+                            width: 60%;
+                            height: 70%;
+                            text-align: right;
+                            /* margin: 0 15% 20% 15%; */
+                            color: var(--lighter);
+                            display: block;
+                            position: absolute;
+                            top: 8vw;
+                            right: 10vw;
+                            animation: shake infinite;
+                            -webkit-animation-duration: 2s;
+                            animation-duration: 2s;
+                            font-size: var(--reg);
+                            line-height: 3vw;
+                            /* filter: drop-shadow(0 0 1rem rgb(194, 191, 188)); */
+                        }
+                        
+                        .start p,
+                        li,
+                        i {
+                            font-size: 2.5vw;
+                        }
+                        
+                        .start a {
+                            font-size: var(--tito);
+                            text-decoration: none;
+                            color: rgb(42, 48, 33);
+                        }
+                        
+                        .animation {
+                            animation: shake infinite;
+                            -webkit-animation-duration: 2s;
+                            animation-duration: 2s;
+                        }
+                        
+                        .tabula {
+                            display: none;
+                        }
+                        
+                        @keyframes shake {
+                            0%,
+                            100% {
+                                -webkit-transform: translateX(0);
+                            }
+                            10%,
+                            30% {
+                                -webkit-transform: translateY(5px);
+                            }
+                            50%,
+                            70%,
+                            90% {
+                                -webkit-transform: translateX(-10px);
+                            }
+                            20%,
+                            40%,
+                            60%,
+                            80% {
+                                -webkit-transform: translateY(-10px);
+                            }
+                        }
+                        
+                        @keyframes shake {
+                            0%,
+                            100% {
+                                transform: translateX(0);
+                            }
+                            10%,
+                            30% {
+                                transform: translateY(5px);
+                            }
+                            50%,
+                            70%,
+                            90% {
+                                transform: translateX(-10px);
+                            }
+                            20%,
+                            40%,
+                            60%,
+                            80% {
+                                transform: translateY(-10px);
+                            }
+                        }
+                        
+                        .uno {
+                            position: absolute;
+                            top: 50vw;
+                            left: 200vw;
+                        }
+                        
+                        .due {
+                            position: absolute;
+                            top: 400vw;
+                            left: 900vw;
+                        }
+                        
+                        .tre {
+                            position: absolute;
+                            top: 200vw;
+                            left: 300vw;
+                        }
+                        
+                        .quattro {
+                            position: absolute;
+                            top: 300vw;
+                            left: 750vw;
+                        }
+                        
+                        .cinque {
+                            position: absolute;
+                            top: 20vw;
+                            left: 800vw;
+                        }
+                        
+                        .sei {
+                            position: absolute;
+                            top: 400vw;
+                            left: 100vw;
+                        }
+                        
+                        p,
+                        a {
+                            font-size: var(--reg);
+                            color: var(--lighter);
+                            /* text-shadow: 10px 10px 4px rgba(51, 255, 0, 0.1) */
+                        }
+                        
+                        button {
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            display: inline-block;
+                            margin: 0 .5vw;
+                            min-width: 10vw;
+                            background-color: rgba(255, 255, 255, 0.7);
+                            border-radius: 50px;
+                            text-decoration: none;
+                            margin-bottom: 1vw;
+                            padding: .5vw 1vw;
+                            filter: drop-shadow(0 0 0.75rem var(--lighter));
+                        }
+                        
+                        .testa {
+                            width: 100%;
+                            /* border: solid 1px rebeccapurple; */
+                            justify-content: space-between;
+                            z-index: 300;
+                            bottom: 0;
+                            /* left: 10vw; */
+                            /* height: 0; */
+                            position: fixed;
+                            display: flex;
+                        }
+                        
+                        .testa a {
+                            text-decoration: none;
+                            font-size: 4vw;
+                            color: white;
+                            /* filter: drop-shadow(0 0 1.75rem rgb(110, 191, 130)); */
+                        }
+                        
+                        a button {
+                            font-family: 'commune';
+                            text-decoration: none;
+                            font-size: 2.5vw;
+                            color: var(--pink);
+                        }
+                        
+                        a2 button {
+                            font-family: 'commune';
+                            text-decoration: none;
+                            font-size: 2.5vw;
+                            color: var(--pink);
+                        }
+                        
+                        .colophon {
+                            display: none;
+                            z-index: 400;
+                            /* border: solid 1px green; */
+                            width: 100%;
+                            height: 100%;
+                            position: fixed;
+                            background-color: black;
+                            color: var(--darker);
+                            font-size: 10vw;
+                        }
+                        
+                        .infracolo {
+                            display: flex;
+                            /* flex-direction: column; */
+                        }
+                        
+                        .colophon li,
+                        p,
+                        ul {
+                            font-size: 5vw;
+                            line-height: 5vw;
+                            list-style: none;
+                        }
+                        
+                        .colophon p {
+                            color: white;
+                        }
+                        
+                        .colophon ul {
+                            color: #0f0;
+                            line-height: .5vw;
+                        }
+                        
+                        .colophon button {
+                            height: 99vh;
+                            font-family: 'commune';
+                            /* width: 500vw; */
+                            font-size: 15vw;
+                        }
+                        
+                        .menu a {
+                            font-size: 6vw;
+                            line-height: 5vw;
+                        }
+                        
+                        .menu {
+                            width: 80%;
+                            height: 80%;
+                            /* background-color: rgba(175, 171, 171, 0.22); */
+                            z-index: 300;
+                            position: fixed;
+                            display: inline;
+                            top: 0;
+                            font-size: var(--reg);
+                            /* letter-spacing: 18px; */
+                        }
+                        
+                        .menuButton {
+                            display: none;
+                            position: fixed;
+                            z-index: 300;
+                            width: 15%;
+                            left: 2vw;
+                            bottom: 1.5vw;
+                            filter: drop-shadow(0 0 0.75rem var(--lighter));
+                        }
+                        
+                        .mobile {
+                            display: none;
+                        }
+                        
+                        .arr {
+                            text-decoration: none;
+                            position: relative;
+                            bottom: 30%;
+                        }
+                        
+                        .arr p:hover {
+                            color: var(--active);
+                        }
+                        
+                        .arrow {
+                            position: relative;
+                            text-align: center;
+                            font-size: 5vw;
+                            z-index: 220;
+                            /* margin-bottom: 10vw; */
+                        }
+                        
+                        .arrow p {
+                            color: white;
+                        }
+                        
+                        .coloButton {
+                            bottom: 0;
+                            right: 0;
+                            position: fixed;
+                            position: fixed;
+                            z-index: 900;
+                            height: 24vw;
+                            font-size: 4vw;
+                            line-height: 3vw;
+                        }
+                        
+                        @media only screen and (max-width: 600px) {
+                            .mobile {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            .mobile button {
+                                width: 100%;
+                                height: 5%;
+                                font-size: 7vw;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                            body {
+                                /* padding-right: 10px; */
+                                width: 100%;
+                                height: 100vh;
+                                position: relative;
+                                line-height: 10%;
+                                /* border: solid 1vh green; */
+                            }
+                            .box {
+                                width: 100%;
+                                min-height: 100vh;
+                                /* border: solid 1px red; */
+                                position: absolute;
+                            }
+                             :root {
+                                --reg: 75px;
+                            }
+                            .colophon button {
+                                padding: 15px;
+                                width: 50%;
+                                font-size: 100px;
+                            }
+                            #logo {
+                                width: 100px;
+                                top: 20px;
+                                right: 20px;
+                                /* filter: ; */
+                                filter: drop-shadow(0 0 0.75rem white)
+                            }
+                            .frame {
+                                border: 3vw var(--lighter) solid;
+                            }
+                            .vids {
+                                flex-direction: column;
+                            }
+                            .dx,
+                            .sx {
+                                height: auto;
+                                display: block;
+                                height: 40%;
+                                /* border: solid 2px red; */
+                            }
+                            .testini {
+                                bottom: 0;
+                                position: relative;
+                                text-align: center;
+                                padding-top: 10px;
+                                width: 100%;
+                            }
+                            .testini span {
+                                bottom: 0;
+                                padding-top: 10px;
+                                text-align: center;
+                            }
+                            .tit {
+                                font-size: 10vw;
+                            }
+                            .info {
+                                font-size: 5vw;
+                            }
+                            .cred {
+                                font-size: 7vw;
+                            }
+                            iframe {
+                                height: 100%;
+                                /* width: 100%; */
+                                border: solid;
+                            }
+                            .testa {
+                                z-index: 80;
+                            }
+                            .menuButton {
+                                display: none;
+                            }
+                            .start {
+                                height: 100vw;
+                                margin-top: 10%;
+                                line-height: 10px;
+                                width: 75%;
+                            }
+                            .start p,
+                            li {
+                                font-size: 5vw;
+                            }
+                            .menu {
+                                top: 0;
+                                z-index: 300;
+                                width: 100vw;
+                                height: 80vh;
+                                line-height: 30vw;
+                            }
+                            .menu a {
+                                font-style: bold;
+                                font-size: 15vw;
+                                line-height: 10vw;
+                                display: block;
+                                position: inherit;
+                                z-index: 80;
+                            }
+                            .coloButton {
+                                /* text-orientation: sideways; */
+                                bottom: 15px;
+                                right: 20px;
+                                position: fixed;
+                                z-index: 900;
+                                height: 24vh;
+                                font-size: 20px;
+                                line-height: 15px;
+                            }
+                            .uno {
+                                position: relative;
+                                top: 50vw;
+                                left: 200vw;
+                            }
+                            .due {
+                                position: relative;
+                                top: 400vw;
+                                left: 900vw;
+                            }
+                            .tre {
+                                position: relative;
+                                top: 200vw;
+                                left: 300vw;
+                            }
+                            .quattro {
+                                position: relative;
+                                top: 300vw;
+                                left: 750vw;
+                            }
+                            .cinque {
+                                position: relative;
+                                top: 900vw;
+                                left: 800vw;
+                            }
+                            .sei {
+                                position: relative;
+                                top: 300vw;
+                                left: 100vw;
+                            }
+                            .titoloni {
+                                position: unset;
+                                height: unset;
+                                margin-top: 1vw;
+                                /* border: solid 1px blue; */
+                            }
+                            .titoloni p {
+                                font-size: 15vw;
+                                line-height: 11vw;
+                            }
+                            .infracolo {
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            .colotext {
+                                padding: 10px 20px;
+                                height: 75%;
+                                position: absolute;
+                            }
+                            .colophon button {
+                                height: 25%;
+                                bottom: 0;
+                                position: absolute;
+                                width: 100%;
+                                width: 100%;
+                                height: 25%;
+                            }
+                        }

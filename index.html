@@ -10,127 +10,470 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="ico.png">
-    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+    <script src="jquery-3.5.0.min.js"></script>
 </head>
 
 <body>
 
-    <div class="colophon">
-        <button onclick="$('.colophon').slideUp()">Close</button>
-        <div>
-            <p>Curated by</p>
-            <li>
-                <ul>Federica Mirabella</ul>
-                <ul>Federico Poni</ul>
-            </li>
-            <p>Artists in random order (refresh for other order >:) )</p>
-            <ul>to</ul>
-            <ul>implement</ul>
+    <div class="desktop">
+
+        <div class="colophon">
+            <div class="infracolo">
+
+                <div class="colotext">
+                    <p>Curated by</p>
+                    <li>
+                        <ul>Federica Mirabella</ul>
+                        <ul>Federico Poni</ul>
+                    </li>
+                    <p>Artists in random order (refresh for other order >:) )</p>
+                    <ul>to</ul>
+                    <ul>implement</ul>
+                </div>
+                <div>
+                    <a href="#start" id=""><button onclick="noColophon()">Close</button></a>
+
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class='testa'>
-        <a href="#start" id="#"><button>to start</button></a>
-        <a href="#" id=""><button onclick="$('.colophon').slideDown()">colophon</button></a>
-    </div>
+        <div class='testa'>
+            <div>
+                <a href="#start" id="" class="menuButton" onclick="menuUp()">Rifting</a>
+            </div>
+            <div class="startissimo"><a href="#start" id="#" class="titolissimo">Rifting</a></div>
+            <div>
+                <a2><button class="coloButton" onclick="showColophon()"><span>W<br>e<br>l<br>c<br>o<br>m<br>e</span></button></a2>
+            </div>
+        </div>
 
-    <img id="logo" src="tw5_logo.png">
+        <a id="" href="http://thewrong.org" target="_blank"><img id="logo" src="tw5_logo.png"></a>
+        <a id="" href="http://thewrong.org" target="_blank"><img id="logo2" src="tw5_logo.png"></a>
 
-    <div class="start">
-        <a id="start" href="">Rifting</a>
-        <br> n.
-        <ol>
-            <li>A fissure, crack, or opening, as in rock.</li>
-            <li>A break in friendly relations: <i>a rift between siblings.</i></li>
-            <li>Geliogy An area where the lithosphere is thinning, typically associated with large faults and grabens.</li>
-        </ol>
-        <i>v.</i><b>      rift·ed, rift·ing, rifts</b><br>
-        <i>v.intr</i> To split open; break.<br>
-        <i>v.tr.</i> To cause to split open or break.<br>
-    </div>
-
-    <div class="frame"></div>
-
-    <div class="menu">
-        <b>
-        <a href="#uno" id="#">It lasts a fraction</a><br>
-        <a href="#due" id="#">of a life</a><br>
-        <a href="#tre" id="#">like the truth of the sense</a><br>
-        <a href="#quattro" id="#">that you can find around /</a><br>
-        <a href="#cinque" id="#">It won't end</a><br>
-        <a href="#sei" id="#">not so soon</a>
-    </b>
-    </div>
-
-    <div class="uno">
-        <a id="uno" href=""></a>
-        <!-- collapses -->
-        <iframe src="https://player.vimeo.com/video/630942828?h=5b78092be7&color=e11217&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <!-- contro -->
-        <iframe src="https://player.vimeo.com/video/364666357?h=3ff0c038d4&color=e11217&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="due">
-        <a id="due" href=""></a>
-        <!-- there is and that -->
-        <iframe src="https://player.vimeo.com/video/283751161?h=26b77125c6&color=e11217&title=0&byline=0&portrait=0" width="1280" height="2276" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <!-- elfo -->
-        <iframe src="https://player.vimeo.com/video/632903107?h=f4fc6d195c&color=e11217&title=0&byline=0&portrait=0" width="1280" height="1280" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
-    </div>
-
-    <div class="tre">
-        <a id="tre" href=""></a>
-        <!-- rubedodoom -->
-        <iframe src="https://player.vimeo.com/video/423546884?h=5a63f38ce6&color=e11217&title=0&byline=0&portrait=0" width="1280" height="1280" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <!-- happy bday -->
-        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="quattro">
-        <a id="quattro" href=""></a>
-        <!-- tari -->
-        <iframe src="https://player.vimeo.com/video/632409885?h=f826b47463&color=e11217&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <!-- conte -->
-        <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9&color=e11217&title=0&byline=0&portrait=0" width="1280" height="664" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
-    </div>
-
-    <div class="cinque">
-        <a id="cinque" href=""></a>
-        <!-- cat -->
-        <iframe src="https://player.vimeo.com/video/631171387?h=5aa128ae33&color=e11217&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <!-- coral -->
-        <iframe src="https://player.vimeo.com/video/599791705?h=9c42dbafae&color=e11217&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> </div>
-    </div>
-
-    <div class="sei">
-        <a id="sei" href=""></a>
-        <!-- convergenze -->
-        <iframe src="https://player.vimeo.com/video/631085215?h=fb441ce1b8&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <!-- 235000 times -->
-        <iframe src="https://player.vimeo.com/video/430460511?h=daeff52f93&color=e11217&title=0&byline=0&portrait=0" width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <div class="frame"></div>
 
 
-    <script>
-        var links = document.querySelectorAll('a');
-        links = Array.prototype.slice.call(links);
+        <div class="menu">
 
-        links.forEach(link => {
-            var href = link.getAttribute('href');
-            if (link.getAttribute('href').startsWith('#')) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var dest = document.getElementById(href.substring(1)).parentNode;
-                    dest.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                        inline: "center"
-                    });
-                })
+            <a href="#uno" id="menu" onclick="menuDown()">It lasts a fraction</a><br>
+            <a href="#due" id="#" onclick="menuDown()">of life</a><br>
+            <a href="#tre" id="#" onclick="menuDown()">like the truth of making sense</a><br>
+            <a href="#quattro" id="#" onclick="menuDown()">that you can find around /</a><br>
+            <a href="#cinque" id="#" onclick="menuDown()">It won't end</a><br>
+            <a href="#sei" id="#" onclick="menuDown()">not so soon</a>
+
+        </div>
+
+
+        <div class="start">
+            <a id="start" href="">Rifting</a>
+            <br>
+            <p>n.</p>
+            <ol>
+                <li>A fissure, crack, or opening, as in rock.</li>
+                <li>A break in friendly relations: <i>a rift between siblings.</i></li>
+                <li>Geliogy An area where the lithosphere is thinning, typically associated with large faults and grabens.</li>
+            </ol>
+            <p> <i>v.</i><b>      rift·ed, rift·ing, rifts</b><br>
+                <i>v.intr</i> To split open; break.<br>
+                <i>v.tr.</i> To cause to split open or break.</p>
+        </div>
+
+
+
+        <div class="tabula">
+
+
+            <div class="box uno">
+
+                <a id="uno" href="">
+
+                    <div class="titoloni">
+                        <p>It lasts a fraction</p>
+                    </div>
+
+                    <div class="vids">
+
+                        <div class="sx">
+                            <!-- collapses -->
+                            <iframe src="https://player.vimeo.com/video/630942828?h=5b78092be7&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">Collapses</span>
+                                <span class="info">Enrico Marcon - 2021</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+                            <a id="" class="arr" href="#start" onclick="menuUp()">
+                                <!-- <div class="arrow">
+                                    <p>←</p>
+                                </div> -->
+                            </a>
+
+                        </div>
+
+
+                        <div class="dx">
+                            <!-- contro -->
+                            <iframe src="https://player.vimeo.com/video/364666357?h=3ff0c038d4&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">Contro</span>
+                                <span class="info">Federico Poni - 2018 - hi8</span>
+                                <span class="cred">presidio medico chirurgico</span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <a class="mobile" href="#start" id="#"><button onclick="menuUp()">Rifting</button></a>
+                    <!--<a class="mobile" href="#" id=""><button onclick="showColophon()">Colophon</button></a>-->
+                    <a id="" class="arr" href="#due">
+                        <div class="arrow">
+                            <p>→</p>
+                        </div>
+                    </a>
+                </a>
+            </div>
+
+
+
+
+            <div class="box due">
+                <a id="due" href="">
+                    <div class="titoloni">
+                        <p>of life</p>
+                    </div>
+
+                    <div class="vids">
+                        <div class="sx">
+                            <!-- there is and that -->
+                            <iframe src="https://player.vimeo.com/video/283751161?h=26b77125c6&color=e11217&title=0&byline=0&portrait=0 " width="720" height="720" frameborder="0 " allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+                            <a id="" class="arr" href="#uno">
+                                <!-- <div class="arrow">
+                                    <p>←</p>
+                                </div> -->
+                            </a>
+
+
+                        </div>
+
+                        <div class="dx">
+                            <!-- elfo -->
+                            <iframe src="https://player.vimeo.com/video/632903107?h=f4fc6d195c&color=e11217&title=0&byline=0&portrait=0 " width="720" height="720" frameborder="0 " allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+
+                        </div>
+
+                        <a class="mobile" href="#menu" id="#"><button onclick="menuUp()">Rifting</button></a>
+                        <!--<a class="mobile" href="#" id=""><button onclick="showColophon()">Colophon</button></a>-->
+                    </div>
+                    <a id="" class="arr" href="#tre">
+                        <div class="arrow">
+                            <p>→</p>
+                        </div>
+                    </a>
+                </a>
+            </div>
+
+
+            <div class="box tre">
+                <a id="tre" href="">
+
+                    <div class="titoloni">
+                        <p>like the truth of making sense</p>
+                    </div>
+
+                    <div class="vids">
+                        <div class="sx">
+                            <!-- rubedodoom -->
+                            <iframe src="https://player.vimeo.com/video/423546884?h=5a63f38ce6&color=e11217&title=0&byline=0&portrait=0 " width="720" height="720" frameborder="0 " allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+                            <a id="" class="arr" href="#due">
+                                <!-- <div class="arrow">
+                                    <p>←</p>
+                                </div> -->
+                            </a>
+                        </div>
+
+                        <div class="dx">
+                            <!-- happy bday -->
+                            <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9 " width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+                        </div>
+
+                        <a class="mobile" href="#menu" id="#"><button onclick="menuUp()">Rifting</button></a>
+                        <!--<a class="mobile" href="#" id=""><button onclick="showColophon()">Colophon</button></a>-->
+                    </div>
+                    <a id="" class="arr" href="#quattro">
+                        <div class="arrow">
+                            <p>→</p>
+                        </div>
+                    </a>
+
+                </a>
+            </div>
+
+
+            <div class="box quattro">
+                <a id="quattro" href="">
+
+                    <div class="titoloni">
+                        <p>that you can find around /</p>
+                    </div>
+
+                    <div class="vids">
+                        <div class="sx">
+                            <!-- tari -->
+                            <iframe src="https://player.vimeo.com/video/632409885?h=f826b47463&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+                            <a id="" class="arr" href="#tre">
+                                <!-- <div class="arrow">
+                                    <p>←</p>
+                                </div> -->
+                            </a>
+
+                        </div>
+
+
+                        <div class="dx">
+                            <!-- conte -->
+                            <iframe src="https://player.vimeo.com/video/632130512?h=35f63722d9&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0 " allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+
+
+                        </div>
+
+                        <a class="mobile" href="#menu" id="#"><button onclick="menuUp()">Rifting</button></a>
+                        <!--<a class="mobile" href="#" id=""><button onclick="showColophon()">Colophon</button></a>-->
+                    </div>
+                    <a id="" class="arr" href="#cinque">
+
+                        <div class="arrow">
+                            <p>→</p>
+                        </div>
+                    </a>
+                </a>
+
+            </div>
+
+
+            <div class="box cinque">
+                <a id="cinque" href="">
+                    <div class="titoloni">
+                        <p>It won't end</p>
+                    </div>
+
+                    <div class="vids">
+                        <div class="sx">
+                            <!-- cat -->
+                            <iframe src="https://player.vimeo.com/video/631171387?h=5aa128ae33&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+                            <a id="" class="arr" href="#quattro">
+                                <!-- <div class="arrow">
+                                    <p>←</p>
+                                </div> -->
+                            </a>
+
+                        </div>
+
+                        <div class="dx">
+                            <!-- coral -->
+                            <iframe src="https://player.vimeo.com/video/599791705?h=9c42dbafae&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+
+                        </div>
+
+                        <a class="mobile" href="#menu" id="#"><button onclick="menuUp()">Rifting</button></a>
+                        <!--<a class="mobile" href="#" id=""><button onclick="showColophon()">Colophon</button></a>-->
+                    </div>
+
+                    <a id="" class="arr" href="#sei">
+                        <div class="arrow">
+                            <p>→</p>
+                        </div>
+                    </a>
+                </a>
+            </div>
+
+            <div class="box sei">
+                <a id="sei" href="">
+                    <div class="titoloni">
+                        <p>not so soon</p>
+                    </div>
+
+
+
+
+                    <div class="vids">
+
+                        <div class="sx">
+                            <!-- convergenze -->
+                            <iframe src="https://player.vimeo.com/video/631085215?h=fb441ce1b8&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">titolino</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+                            <a id="" class="arr" href="#cinque">
+                                <!-- <div class="arrow">
+                                    <p>←</p>
+                                </div> -->
+                            </a>
+                        </div>
+
+                        <div class="dx">
+                            <!-- 235000 times -->
+                            <iframe src="https://player.vimeo.com/video/430460511?h=daeff52f93&color=e11217&title=0&byline=0&portrait=0 " width="1280" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            <div class="testini">
+                                <span class="tit">prova</span>
+                                <span class="info">blablablablalba</span>
+                                <span class="cred">presidio medico chirurgico</span>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                    <a id="" class="arr" href="#start" onclick="menuUp()">
+                        <div class="arrow">
+                            <p>End</p>
+                        </div>
+                    </a>
+                </a>
+            </div>
+
+        </div>
+
+
+        <script defer>
+            $('.titolissimo').css("font-size", '40vw')
+            $('.startissimo').css('display', 'inline').addClass("animation")
+            $('#logo').fadeOut()
+
+            // $('.menu').slideDown()
+
+            var links = document.querySelectorAll('a');
+            links = Array.prototype.slice.call(links);
+
+
+            links.forEach(link => {
+                var href = link.getAttribute('href');
+                if (link.getAttribute('href').startsWith('#')) {
+
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        var dest = document.getElementById(href.substring(1)).parentNode;
+                        dest.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                            inline: "center"
+                        });
+                    })
+                }
+
+            });
+
+            function menuUp() {
+
+                $('.menuButton').fadeOut()
+                $('.menu').slideDown()
+                $('.coloButton').fadeIn()
+
+                $('.startissimo').css('display', 'inline').addClass("animation")
+                $('.titolissimo').css("font-size", '40vw').fadeIn()
+
+
+                $('.tabula').fadeOut()
+                $('.frame').fadeIn()
+                $('#logo').fadeOut()
+                $('#logo2').fadeIn()
+
+
             }
 
-        });
-    </script>
+            function menuDown() {
+                $('.menu').slideUp()
+                $('.menuButton').fadeIn()
+                $('.coloButton').fadeOut()
+                $('.titolissimo').css("font-size", '5vw').fadeOut()
+                $('.startissimo').fadeOut().removeClass("animation")
+
+
+                $('.tabula').fadeIn()
+                $('.frame').fadeOut()
+
+                $('#logo').fadeIn()
+                $('#logo2').fadeOut()
+
+            }
+
+            function showColophon() {
+                $('.colophon').slideDown()
+                $('.tabula').fadeOut()
+                $('.menuButton').fadeOut()
+                $('.coloButton').fadeOut()
+
+            }
+
+            function noColophon() {
+                $('.menu').slideDown()
+                $('.colophon').slideUp()
+                $('.coloButton').fadeIn()
+
+
+
+                $('.startissimo').css('display', 'inline').addClass("animation")
+                $('.titolissimo').css("font-size", '40vw').fadeIn()
+
+                $('.frame').fadeIn()
+                $('#logo').fadeOut()
+                $('#logo2').fadeIn()
+            }
+        </script>
 
 
 </body>
