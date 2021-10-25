@@ -457,7 +457,16 @@
                 $('.tabula').fadeIn()
                 $('.frame').fadeOut()
 
-                $('#logo').fadeIn()
+                var x = window.matchMedia("(max-width: 600px)")
+
+                if (x.matches) {
+                    $('#logo').fadeOut()
+                } else {
+                    $('#logo').fadeIn()
+                }
+
+
+                
                 $('#logo2').fadeOut()
 
             }

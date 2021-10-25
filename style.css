@@ -61,7 +61,7 @@
                         #logo {
                             position: fixed;
                             z-index: 300;
-                            width: 35%;
+                            width: 12%;
                             right: 2vw;
                             bottom: 1vw;
                             filter: drop-shadow(0 0 2.75rem rgb(45, 213, 107));
@@ -70,15 +70,13 @@
                         #logo2 {
                             position: fixed;
                             z-index: 300;
-                            width: 35%;
+                            width: 15%;
                             right: 4vw;
                             top: 5vw;
                             filter: drop-shadow(0 0 0.75rem rgb(45, 213, 107));
 
                         }
-                        .logo{
-                            border: solids;
-                        }
+                       
                         iframe {
                             /* margin: 0; */
                             z-index: 200;
@@ -568,10 +566,14 @@ max-height: 30vw;
                             }
                             
                             #logo {
-                                width: 40px;
-                                top: 20%;
-                                right: 20%;
-                             
+                                display: none;
+                                /* top: 5%; */
+                                /* right: 15%; */
+                            }
+                            #logo2 {
+                                width: 30%;
+                                top: 5%;
+                                right: 5%;
                             }
                             .frame {
                                 border: 3vw var(--active) solid;
