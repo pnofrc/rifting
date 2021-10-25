@@ -55,26 +55,30 @@
                         a:hover {
                             color: var(--active)
                         }
+
+                        
                         
                         #logo {
                             position: fixed;
                             z-index: 300;
-                            width: 15%;
+                            width: 35%;
                             right: 2vw;
                             bottom: 1vw;
-                            filter: drop-shadow(0 0 2.75rem rgb(45, 213, 107))
-
+                            filter: drop-shadow(0 0 2.75rem rgb(45, 213, 107));
                         }
                         
                         #logo2 {
                             position: fixed;
                             z-index: 300;
-                            width: 15%;
+                            width: 35%;
                             right: 4vw;
-                            top: 3vw;
-                            filter: drop-shadow(0 0 0.75rem rgb(45, 213, 107))
+                            top: 5vw;
+                            filter: drop-shadow(0 0 0.75rem rgb(45, 213, 107));
+
                         }
-                        
+                        .logo{
+                            border: solids;
+                        }
                         iframe {
                             /* margin: 0; */
                             z-index: 200;
@@ -555,7 +559,7 @@ max-height: 30vw;
                             }
                             .box {
                                 width: 100%;
-                                min-height: 100vh;
+                                min-height: 90vh;
                                 /* border: solid 1px red; */
                                 position: absolute;
                             }
@@ -649,14 +653,16 @@ max-height: 30vw;
                                 z-index: 80;
                             }
                             .coloButton {
-                                /* text-orientation: sideways; */
                                 bottom: 15px;
                                 right: 20px;
                                 position: fixed;
                                 z-index: 900;
-                                height: 24vh;
-                                font-size: 20px;
+                                height: 25vh;
+                                /* font-size: x; */
                                 line-height: 15px;
+                            }
+                            .coloButton span{
+                                font-size: 5vh;
                             }
                             .uno {
                                 position: relative;
