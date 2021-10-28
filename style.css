@@ -453,9 +453,23 @@ max-height: 30vw;
                         
                         .colotext{
                             border: solid white 3px;
-                            overflow-x: scroll;
+                            overflow-y: scroll;
+
                             height: 100%;
+                            width: 80%;
+                            margin-bottom: 20%;
                         }
+
+                        .colotext p, ul{
+                            font-size: var(--reg);
+                            line-height: var(--reg);
+                            width: 50%;
+                        }
+
+                        .colotext ul{
+                            width: 100%;
+                        }
+
                         .menu a {
                             font-size: 6vw;
                             line-height: 5vw;
@@ -524,13 +538,70 @@ max-height: 30vw;
                             bottom: 3vw;
                             right: 3vw;
                             position: fixed;
-                            position: fixed;
                             z-index: 900;
                             height: 24vw;
                             font-size: 4vw;
                             line-height: 3vw;
                         }
                         
+
+                        .infDiv{
+                            display: none;
+                            position: fixed;
+                            width: 100%;
+                            height: 100%;
+                            /* overflow-y: hidden; */
+                            overflow-x: hidden ;
+                            z-index: 900;
+                            background-image: linear-gradient(var(--active),var(--darker));
+                        }
+
+
+                        .infButton{
+                            display: block;
+                            position: absolute;
+                            bottom: 5vw;
+                            left: 17vw;
+                            z-index: 400;
+                            font-family: commune;
+                            width: 13%;
+                            height: 20%;                           
+                        }
+
+
+
+
+
+                        
+
+                        .infDiv button{
+                            position: fixed;
+                            top: 0;
+                            width: 99%;
+                            height: 20%;
+                            margin-top: .5vw;
+                            font-size: 11vw;
+                            color: var(--active);
+                            font-family: commune;
+                            z-index: 2;
+                            /* margin:; */
+                        }
+                        
+                        .textCur{
+                            overflow-y: scroll;
+
+                            z-index: 1;
+                            color: var(--darker);
+                            line-height: 5vw;
+                            position:fixed;
+                            top: 25%;
+                            width: 40%;
+                            left: 45%;
+                            height: 70%;
+                            margin-top: 2%;
+                            background-image: linear-gradient(var(--darker),var(--active));
+                        }
+
                         @media only screen and (max-width: 600px) {
 
                             .desktop{
@@ -711,19 +782,24 @@ max-height: 30vw;
                                 display: flex;
                                 flex-direction: row;
                             }
+
+
                             .colotext {
                                 padding: 10px 20px;
                                 height: 85%;
+                                width: 100%;
                                 position: absolute;
-                                
+                                top: 20%;
                             }
 
                             .colotext p{
                                 font-size: 8vw;
                                 line-height: 6vw;
+                                width: 100%;
                             }
 
                             .colotext li{
+                                /* margin: 0; */
                                 font-size: 8vw;
                                 line-height: 6vw;
                             }
@@ -738,6 +814,29 @@ max-height: 30vw;
                                 /* height: 25%; */
                             }
 
+                            /* .colotext{
+                                height: 120%;
+                                border: solid red 2px
+                            } */
+
+                            ul{
+                                margin: 0;
+                            }
+
+                            .textCur{
+                                /* border-top: white 2px solid; */
+                                width: 90%;
+                                height: 30%;
+                                left: 5%;
+                                top: 0;
+                                /* font-size: 3vw; */
+                            }
+
+                            .textCur p {
+                                font-size: 10vw;
+                                line-height: 7.5vw;
+                            }
+
                             .colotext div:nth-child(1), span{
                                 /* height: 25%; */
                                 padding-top: 110px;
@@ -745,9 +844,20 @@ max-height: 30vw;
                                 height: 20%;
                             }
 
+                            .arrow {
+                                /* border: solid; */
+                                line-height: 0;
+                                z-index: 0;
+                                /* /* position: absolute; */
+                                bottom: 0;
+                                left: 0%; 
+                                /* margin-bottom: 20px ; */
+                                height: 20px;
+                            }
+
 
                             .arrow span{
-                
+                   
                             font-size: 18vw;
                             z-index: 220;
                             }
