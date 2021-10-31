@@ -164,7 +164,7 @@
                             color: var(--tit);
                         }
                         
-                        .info {
+                        .infino {
                             font-size: 10px;
                             color: var(--info);
                         }
@@ -437,6 +437,7 @@
                         
                         .arr {
                             text-decoration: none;
+                            display: block;
                             position: relative;
                             bottom: 30%;
                         }
@@ -466,6 +467,22 @@
                             height: 24vw;
                             font-size: 4vw;
                             line-height: 3vw;
+                        }
+                        
+                        .info {
+                            width: 100%;
+                            height: 100%;
+                            position: fixed;
+                            background-color: white;
+                            z-index: 500;
+                        }
+                        
+                        .infoButton {
+                            display: none;
+                            position: relative;
+                            z-index: 400;
+                            bottom: 0;
+                            left: 10vw;
                         }
                         
                         @media only screen and (max-width: 600px) {
@@ -537,7 +554,7 @@
                             .tit {
                                 font-size: 10vw;
                             }
-                            .info {
+                            .infino {
                                 font-size: 5vw;
                             }
                             .cred {
