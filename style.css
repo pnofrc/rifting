@@ -1,822 +1,839 @@
-                        @font-face {
-                            font-family: 'cantique';
-                            src: url('fonts/Cantique-Normal.woff') format('woff');
-                        }
-                        
-                        @font-face {
-                            font-family: 'commune';
-                            src: url('fonts/Gulax-Regular.woff') format('woff');
-                        }
-                        
-                         :root {
-                            font-family: 'commune';
-                            --reg: 2.5vw;
-                            --tito: 15vw;
-                            --back: #D6D3D8;
-                            --lighter: rgb(19, 6, 27);
-                            --darker: #13051b;
-                            --active: #4EF1AE;
-                            --tit: rgb(66, 64, 64);
-                            --info: rgba(59, 53, 53, 0.577);
-                            --cred: rgb(19, 18, 18);
-                        }
-                        
-                        * {
-                            box-sizing: border-box;
-                        }
-                        
-                        html {
-                            margin: 0;
-                            scroll-behavior: smooth;
-                        }
-                        
-                         ::-webkit-scrollbar {
-                            display: none;
-                            visibility: hidden;
-                        }
-                        
-                         ::-webkit-scrollbar-track-piece {
-                            visibility: hidden;
-                        }
-                        
-                        body {
-                            background-color: var(--back);
-                            margin: 0;
-                            width: 1000vw;
-                            height: 500vw;
-                            line-height: var(--reg);
-                        }
-                        
-                        a:active {
-                            color: var(--active)
-                        }
-                        
-                        a:hover {
-                            color: var(--active)
-                        }
-                        
-                        #logo {
-                            position: fixed;
-                            z-index: 300;
-                            width: 12%;
-                            right: 2vw;
-                            bottom: 1vw;
-                            filter: drop-shadow(0 0 2.75rem rgb(45, 213, 107));
-                        }
-                        
-                        #logo2 {
-                            position: fixed;
-                            z-index: 300;
-                            width: 15%;
-                            right: 4vw;
-                            top: 5vw;
-                            filter: drop-shadow(0 0 0.75rem rgb(45, 213, 107));
-                        }
-                        
-                        iframe {
-                            /* margin: 0; */
-                            z-index: 200;
-                            border: none;
-                            width: 45vw;
-                            max-height: 30vw;
-                        }
-                        
-                        .desktop {
-                            background-color: var(--back);
-                        }
-                        
-                        .box {
-                            /* background-color: var(--back); */
-                            /* border: 10px blue solid; */
-                            max-height: 95vw;
-                            max-width: 95vw;
-                            justify-content: center;
-                            z-index: 120;
-                        }
-                        
-                        .vids {
-                            display: flex;
-                            flex-direction: row;
-                        }
-                        
-                        .colo {
-                            width: 45vw;
-                            height: 70%;
-                            display: flex;
-                            flex-direction: column;
-                            margin: 0;
-                            /* object-fit: contain; */
-                            /* justify-content: space-around */
-                        }
-                        
-                        .titoloni {
-                            /* border: solid 2px red; */
-                            width: 100%;
-                            margin: 2vw 0;
-                            height: 4vw;
-                            position: relative;
-                            /* border: solid; */
-                            /* padding-bottom: 8vw; */
-                        }
-                        
-                        .box a {
-                            text-decoration: none;
-                        }
-                        
-                        .titoloni p {
-                            text-align: center;
-                            font-size: 7vw;
-                            margin: 0;
-                            color: var(--back);
-                            filter: drop-shadow(0 0 1.75rem rgb(22, 22, 22));
-                        }
-                        
-                        .testini {
-                            /* border: solid; */
-                            display: flex;
-                            flex-direction: column;
-                            /* height: 25vw; */
-                            position: relative;
-                            /* bottom: 9vw; */
-                            /* padding: 3%; */
-                            margin-bottom: 0;
-                            width: 80%;
-                            margin: 5% 10%;
-                        }
-                        
-                        .testini span {
-                            text-align: center;
-                            line-height: 2vw;
-                            font-family: Arial, Helvetica, sans-serif;
-                        }
-                        
-                        .tit {
-                            font-size: 2vw;
-                            /* padding: 3px; */
-                            color: var(--tit);
-                        }
-                        
-                        .info {
-                            font-size: 1vw;
-                            color: var(--info);
-                        }
-                        
-                        .cred {
-                            font-size: 1.2vw;
-                            color: var(--cred);
-                        }
-                        
-                        span.cred {
-                            line-height: 1vw;
-                        }
-                        
-                        .frame {
-                            background-origin: padding-box;
-                            filter: drop-shadow(0 0 3.75rem rgb(0, 0, 0));
-                            top: 0;
-                            left: 0;
-                            position: fixed;
-                            width: 100%;
-                            height: 100%;
-                            border: 1.5vw var(--lighter) solid;
-                            z-index: 10;
-                        }
-                        
-                        .start {
-                            /* border: 1px red solid; */
-                            width: 60%;
-                            height: 70%;
-                            text-align: right;
-                            /* margin: 0 15% 20% 15%; */
-                            color: var(--lighter);
-                            display: block;
-                            position: absolute;
-                            top: 8vw;
-                            right: 10vw;
-                            animation: shake infinite;
-                            -webkit-animation-duration: 2s;
-                            animation-duration: 2s;
-                            font-size: var(--reg);
-                            line-height: 3vw;
-                            /* filter: drop-shadow(0 0 1rem rgb(194, 191, 188)); */
-                        }
-                        
-                        .start p,
-                        li,
-                        i {
-                            font-size: 2.5vw;
-                        }
-                        
-                        .start a {
-                            font-size: var(--tito);
-                            text-decoration: none;
-                            color: rgb(42, 48, 33);
-                        }
-                        
-                        .animation {
-                            animation: shake infinite;
-                            -webkit-animation-duration: 1s;
-                            animation-duration: 1s;
-                        }
-                        
-                        .tabula {
-                            display: none;
-                        }
-                        
-                        @keyframes shake {
-                            0%,
-                            100% {
-                                -webkit-transform: translateX(0);
-                            }
-                            10%,
-                            30% {
-                                -webkit-transform: translateY(25px);
-                            }
-                            50% {
-                                -webkit-transform: translateX(10px);
-                            }
-                            70% {
-                                -webkit-transform: translateX(-15px);
-                            }
-                            90% {
-                                -webkit-transform: translateY(-13px);
-                            }
-                            20%,
-                            40% {
-                                -webkit-transform: translateX(25px);
-                            }
-                            60% {
-                                -webkit-transform: translateX(-20px);
-                            }
-                            80% {
-                                -webkit-transform: translateY(-10px);
-                            }
-                        }
-                        
-                        @keyframes shake {
-                            0%,
-                            100% {
-                                transform: translateX(0);
-                            }
-                            10%,
-                            30% {
-                                transform: translateY(25px);
-                            }
-                            50% {
-                                transform: translateX(10px);
-                            }
-                            70% {
-                                transform: translateX(-15px);
-                            }
-                            90% {
-                                transform: translateY(-13px);
-                            }
-                            20%,
-                            40% {
-                                transform: translateX(25px);
-                            }
-                            60% {
-                                transform: translateX(-20px);
-                            }
-                            80% {
-                                transform: translateY(-10px);
-                            }
-                        }
-                        
-                        .uno {
-                            position: absolute;
-                            top: 50vw;
-                            left: 200vw;
-                        }
-                        
-                        .due {
-                            position: absolute;
-                            top: 400vw;
-                            left: 900vw;
-                        }
-                        
-                        .tre {
-                            position: absolute;
-                            top: 200vw;
-                            left: 300vw;
-                        }
-                        
-                        .quattro {
-                            position: absolute;
-                            top: 300vw;
-                            left: 750vw;
-                        }
-                        
-                        .cinque {
-                            position: absolute;
-                            top: 20vw;
-                            left: 800vw;
-                        }
-                        
-                        .sei {
-                            position: absolute;
-                            top: 400vw;
-                            left: 100vw;
-                        }
-                        
-                        p,
-                        a {
-                            font-size: var(--reg);
-                            color: var(--lighter);
-                            /* text-shadow: 10px 10px 4px rgba(51, 255, 0, 0.1) */
-                        }
-                        
-                        button {
-                            -webkit-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
-                            user-select: none;
-                            display: inline-block;
-                            margin: 0 .5vw;
-                            min-width: 10vw;
-                            background-color: rgba(255, 255, 255, 0.7);
-                            border-radius: 50px;
-                            text-decoration: none;
-                            margin-bottom: 1vw;
-                            padding: .5vw 1vw;
-                            filter: drop-shadow(0 0 0.75rem var(--lighter));
-                        }
-                        
-                        .testa {
-                            width: 100%;
-                            /* border: solid 1px rebeccapurple; */
-                            justify-content: space-between;
-                            z-index: 300;
-                            bottom: 0;
-                            /* left: 10vw; */
-                            /* height: 0; */
-                            position: fixed;
-                            display: flex;
-                        }
-                        
-                        .testa a {
-                            text-decoration: none;
-                            font-size: 4vw;
-                            color: white;
-                            filter: drop-shadow(0 0 2.75rem rgb(48, 82, 57));
-                        }
-                        
-                        a button {
-                            font-family: 'commune';
-                            text-decoration: none;
-                            font-size: 2.5vw;
-                            color: var(--pink);
-                        }
-                        
-                        a2 button {
-                            font-family: 'commune';
-                            text-decoration: none;
-                            font-size: 2.5vw;
-                            color: var(--pink);
-                        }
-                        
-                        .colophon {
-                            display: none;
-                            z-index: 400;
-                            /* border: solid 1px green; */
-                            width: 100%;
-                            height: 100%;
-                            position: fixed;
-                            background-color: black;
-                            color: var(--darker);
-                            font-size: 10vw;
-                            overflow-y: scroll;
-                        }
-                        
-                        .infracolo {
-                            display: flex;
-                            /* flex-direction: column; */
-                        }
-                        
-                        .colophon li,
-                        p,
-                        ul {
-                            /* padding: 0; */
-                            font-size: 5vw;
-                            line-height: 4vw;
-                            list-style: none;
-                        }
-                        
-                        .colophon p {
-                            color: white;
-                        }
-                        
-                        .colophon ul {
-                            color: var(--active);
-                            line-height: .5vw;
-                        }
-                        
-                        .colophon button {
-                            height: 99vh;
-                            position: fixed;
-                            font-family: 'commune';
-                            width: 20vw;
-                            font-size: 15vw;
-                            line-height: 8vw;
-                        }
-                        
-                        .colotext div:nth-child(1) {
-                            /* filter: drop-shadow(0 0 1.75rem var(--active)); */
-                            animation: shake infinite;
-                            -webkit-animation-duration: 1s;
-                            animation-duration: 1s;
-                            font-size: 17vw;
-                            position: relative;
-                            background-color: var(--active);
-                            height: 10%;
-                            /* position: fixed; */
-                            /* z-index: 2; */
-                        }
-                        
-                        .colotext div:nth-child(1) span {
-                            /* z-index: 1; */
-                            /* height: 10%; */
-                            border: white 2px solid;
-                        }
-                        
-                        .colotext {
-                            border: solid white 3px;
-                            overflow-y: scroll;
-                            height: 100%;
-                            width: 80%;
-                            margin-bottom: 20%;
-                        }
-                        
-                        .colotext p,
-                        ul {
-                            font-size: var(--reg);
-                            line-height: var(--reg);
-                            width: 50%;
-                        }
-                        
-                        .colotext ul {
-                            width: 100%;
-                        }
-                        
-                        .menu a {
-                            font-size: 6vw;
-                            line-height: 5vw;
-                        }
-                        
-                        .menu {
-                            width: 80%;
-                            height: 80%;
-                            /* background-color: rgba(175, 171, 171, 0.22); */
-                            z-index: 300;
-                            position: fixed;
-                            display: inline;
-                            top: 0;
-                            font-size: var(--reg);
-                            /* letter-spacing: 18px; */
-                        }
-                        
-                        .menuButton {
-                            display: none;
-                            position: fixed;
-                            z-index: 300;
-                            width: 15%;
-                            left: 2vw;
-                            bottom: 1.5vw;
-                            filter: drop-shadow(0 0 0.75rem var(--lighter));
-                        }
-                        
-                        .mobile {
-                            display: none;
-                        }
-                        
-                        .arr {
-                            text-decoration: none;
-                            display: block;
-                            position: relative;
-                            filter: drop-shadow(0 0 1.75rem rgb(54, 80, 64))
-                            /* height: 80px;  */
-                        }
-                        
-                        .arrow {
-                            animation: shake infinite;
-                            -webkit-animation-duration: 1s;
-                            animation-duration: 1s;
-                            height: 50px;
-                            position: relative;
-                            text-align: center;
-                            font-size: 5vw;
-                            z-index: 220;
-                        }
-                        
-                        .arrow span {
-                            color: var(--darker);
-                            font-size: 200%;
-                        }
-                        
-                        .arrow span:hover {
-                            font-size: 300%;
-                            color: var(--active);
-                        }
-                        
-                        .coloButton {
-                            bottom: 3vw;
-                            right: 3vw;
-                            position: fixed;
-                            z-index: 900;
-                            height: 24vw;
-                            font-size: 4vw;
-                            line-height: 3vw;
-                        }
-                        
-                        .infDiv {
-                            display: none;
-                            position: fixed;
-                            width: 100%;
-                            height: 100%;
-                            /* overflow-y: hidden; */
-                            overflow-x: hidden;
-                            z-index: 900;
-                            background-image: linear-gradient(var(--active), var(--darker));
-                        }
-                        
-                        .infButton {
-                            display: block;
-                            position: absolute;
-                            bottom: 5vw;
-                            left: 17vw;
-                            z-index: 400;
-                            font-family: commune;
-                            width: 13%;
-                            height: 20%;
-                        }
-                        
-                        .infDiv button {
-                            position: fixed;
-                            top: 0;
-                            width: 99%;
-                            height: 20%;
-                            margin-top: .5vw;
-                            font-size: 11vw;
-                            color: var(--active);
-                            font-family: commune;
-                            z-index: 2;
-                            /* margin:; */
-                        }
-                        
-                        .textCur {
-                            overflow-y: scroll;
-                            z-index: 1;
-                            color: var(--darker);
-                            line-height: 5vw;
-                            position: fixed;
-                            top: 25%;
-                            width: 40%;
-                            left: 45%;
-                            height: 70%;
-                            margin-top: 2%;
-                            background-image: linear-gradient(var(--darker), var(--active));
-                        }
-                        
-                        @media only screen and (max-width: 600px) {
-                            .desktop {
-                                display: none;
-                            }
-                            .mobile {
-                                display: flex;
-                                flex-direction: column;
-                            }
-                            .mobile button {
-                                width: 100%;
-                                height: 5%;
-                                font-size: 7vw;
-                                position: absolute;
-                                bottom: 0;
-                            }
-                            body {
-                                /* padding-right: 10px; */
-                                width: 100%;
-                                height: 100vh;
-                                position: relative;
-                                line-height: 10%;
-                                /* border: solid 1vh green; */
-                            }
-                            .box {
-                                width: 100%;
-                                min-height: 90vh;
-                                /* border: solid 1px red; */
-                                position: absolute;
-                            }
-                             :root {
-                                --reg: 75px;
-                            }
-                            #logo {
-                                display: none;
-                                /* top: 5%; */
-                                /* right: 15%; */
-                            }
-                            #logo2 {
-                                width: 30%;
-                                top: 5%;
-                                right: 5%;
-                            }
-                            .frame {
-                                border: 3vw var(--active) solid;
-                            }
-                            .vids {
-                                flex-direction: column;
-                            }
-                            .colo {
-                                height: auto;
-                                display: block;
-                                height: 40%;
-                                width: 100%;
-                                /* border: solid 2px red; */
-                            }
-                            .testini {
-                                bottom: 0;
-                                position: relative;
-                                text-align: center;
-                                /* padding: 10px 0 10px 0; */
-                                /* width: 100%; */
-                                z-index: 300;
-                                /* margin: 10px 0; */
-                            }
-                            .testini span {
-                                bottom: 0;
-                                padding-top: 10px;
-                                text-align: center;
-                            }
-                            .testini .tit {
-                                line-height: 4vw;
-                                font-size: 7vw;
-                            }
-                            .testini .info {
-                                line-height: 3vw;
-                                font-size: 4vw;
-                            }
-                            .testini .cred {
-                                line-height: 4.5vw;
-                                font-size: 5vw;
-                                display: none;
-                            }
-                            iframe {
-                                /* height: 100%; */
-                                width: 100%;
-                                /* border: solid; */
-                            }
-                            .testa {
-                                z-index: 80;
-                            }
-                            .menuButton {
-                                display: none;
-                            }
-                            .start {
-                                height: 100vw;
-                                margin-top: 10%;
-                                line-height: 10px;
-                                width: 75%;
-                            }
-                            .start p,
-                            li {
-                                font-size: 5vw;
-                            }
-                            .menu {
-                                top: 0;
-                                z-index: 300;
-                                width: 100vw;
-                                height: 80vh;
-                                line-height: 27vw;
-                            }
-                            .menu a {
-                                font-style: bold;
-                                font-size: 15vw;
-                                line-height: 10vw;
-                                display: block;
-                                position: inherit;
-                                z-index: 80;
-                            }
-                            .coloButton {
-                                bottom: 15px;
-                                right: 20px;
-                                position: fixed;
-                                z-index: 900;
-                                height: 25vh;
-                                /* font-size: x; */
-                                line-height: 15px;
-                            }
-                            .coloButton span {
-                                font-size: 5vh;
-                            }
-                            .uno {
-                                position: relative;
-                                top: 50vw;
-                                left: 200vw;
-                            }
-                            .due {
-                                position: relative;
-                                top: 400vw;
-                                left: 900vw;
-                            }
-                            .tre {
-                                position: relative;
-                                top: 200vw;
-                                left: 300vw;
-                            }
-                            .quattro {
-                                position: relative;
-                                top: 300vw;
-                                left: 750vw;
-                            }
-                            .cinque {
-                                position: relative;
-                                top: 900vw;
-                                left: 800vw;
-                            }
-                            .sei {
-                                position: relative;
-                                top: 300vw;
-                                left: 100vw;
-                            }
-                            .titoloni {
-                                position: unset;
-                                height: unset;
-                                margin: 1.5% 0 5% 0;
-                                /* border: solid 1px blue; */
-                            }
-                            .titoloni p {
-                                font-size: 70%;
-                                line-height: 11vw;
-                            }
-                            .infracolo {
-                                height: 100%;
-                                display: flex;
-                                flex-direction: row;
-                            }
-                            .colotext {
-                                padding: 10px 20px;
-                                height: 85%;
-                                width: 100%;
-                                position: absolute;
-                                top: 20%;
-                            }
-                            .colotext p {
-                                font-size: 8vw;
-                                line-height: 6vw;
-                                width: 100%;
-                            }
-                            .colotext li {
-                                /* margin: 0; */
-                                font-size: 8vw;
-                                line-height: 6vw;
-                            }
-                            .colophon button {
-                                height: 15%;
-                                bottom: 0;
-                                font-size: 120px;
-                                position: absolute;
-                                padding: 40px 0;
-                                /* width: 100%; */
-                                width: 100%;
-                                /* height: 25%; */
-                            }
-                            /* .colotext{
-                                height: 120%;
-                                border: solid red 2px
-                            } */
-                            ul {
-                                margin: 0;
-                            }
-                            .textCur {
-                                /* border-top: white 2px solid; */
-                                width: 90%;
-                                height: 30%;
-                                left: 5%;
-                                top: 0;
-                                /* font-size: 3vw; */
-                            }
-                            .textCur p {
-                                font-size: 10vw;
-                                line-height: 7.5vw;
-                            }
-                            .colotext div:nth-child(1),
-                            span {
-                                /* height: 25%; */
-                                padding-top: 110px;
-                                font-size: 30vw;
-                                height: 20%;
-                            }
-                            .arrow {
-                                /* border: solid; */
-                                line-height: 0;
-                                z-index: 0;
-                                /* /* position: absolute; */
-                                bottom: 0;
-                                left: 0%;
-                                /* margin-bottom: 20px ; */
-                                height: 20px;
-                            }
-                            .arrow span {
-                                font-size: 18vw;
-                                z-index: 220;
-                            }
-                        }
+@font-face {
+    font-family: 'commune';
+    src: url('fonts/Gulax-Regular.woff') format('woff');
+}
+
+ :root {
+    font-family: 'commune';
+    --reg: 2.5vw;
+    --tito: 15vw;
+    --back: #D6D3D8;
+    --lighter: rgb(19, 6, 27);
+    --darker: #13051b;
+    --active: #4EF1AE;
+    --tit: rgb(66, 64, 64);
+    --info: rgba(59, 53, 53, 0.577);
+    --cred: rgb(19, 18, 18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+ ::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+}
+
+ ::-webkit-scrollbar-track-piece {
+    visibility: hidden;
+}
+
+body {
+    background-color: var(--back);
+    margin: 0;
+    width: 1000vw;
+    height: 500vw;
+    line-height: var(--reg);
+}
+
+a:active {
+    color: var(--active)
+}
+
+a:hover {
+    color: var(--active)
+}
+
+#logo {
+    position: fixed;
+    z-index: 300;
+    width: 12%;
+    right: 2vw;
+    bottom: 1vw;
+    filter: drop-shadow(0 0 2.75rem rgb(45, 213, 107));
+}
+
+#logo2 {
+    position: fixed;
+    z-index: 300;
+    width: 15%;
+    right: 4vw;
+    top: 5vw;
+    filter: drop-shadow(0 0 0.75rem rgb(45, 213, 107));
+}
+
+iframe {
+    /* margin: 0; */
+    z-index: 200;
+    border: none;
+    width: 45vw;
+    max-height: 30vw;
+}
+
+.desktop {
+    background-color: var(--back);
+}
+
+.box {
+    /* background-color: var(--back); */
+    /* border: 10px blue solid; */
+    max-height: 95vw;
+    max-width: 95vw;
+    justify-content: center;
+    z-index: 120;
+}
+
+.vids {
+    display: flex;
+    flex-direction: row;
+}
+
+.colo {
+    width: 45vw;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* object-fit: contain; */
+    /* justify-content: space-around */
+}
+
+.titoloni {
+    /* border: solid 2px red; */
+    width: 100%;
+    margin: 2vw 0;
+    height: 4vw;
+    position: relative;
+    /* border: solid; */
+    /* padding-bottom: 8vw; */
+}
+
+.box a {
+    text-decoration: none;
+}
+
+.titoloni p {
+    text-align: center;
+    font-size: 7vw;
+    margin: 0;
+    color: var(--back);
+    filter: drop-shadow(0 0 1.75rem rgb(22, 22, 22));
+}
+
+.testini {
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    /* height: 25vw; */
+    position: relative;
+    /* bottom: 9vw; */
+    /* padding: 3%; */
+    margin-bottom: 0;
+    width: 80%;
+    margin: 5% 10%;
+}
+
+.testini span {
+    text-align: center;
+    line-height: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tit {
+    font-size: 2vw;
+    /* padding: 3px; */
+    color: var(--tit);
+}
+
+.info {
+    font-size: 1vw;
+    color: var(--info);
+}
+
+.cred {
+    font-size: 1.2vw;
+    color: var(--cred);
+    margin-bottom: 2vw;
+}
+
+span.cred {
+    padding: 10px 20px;
+    line-height: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    /* border: solid; */
+    background-color: var(--active);
+    max-height: 5vw;
+    font-size: 1vw;
+    overflow-y: scroll;
+}
+
+span.cred a,
+p {
+    font-size: 1vw;
+    color: white;
+}
+
+.frame {
+    background-origin: padding-box;
+    filter: drop-shadow(0 0 3.75rem rgb(0, 0, 0));
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    border: 1.5vw var(--lighter) solid;
+    z-index: 10;
+}
+
+.start {
+    /* border: 1px red solid; */
+    width: 60%;
+    height: 70%;
+    text-align: right;
+    /* margin: 0 15% 20% 15%; */
+    color: var(--lighter);
+    display: block;
+    position: absolute;
+    top: 8vw;
+    right: 10vw;
+    animation: shake infinite;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    font-size: var(--reg);
+    line-height: 3vw;
+    /* filter: drop-shadow(0 0 1rem rgb(194, 191, 188)); */
+}
+
+.start p,
+li,
+i {
+    font-size: 2.5vw;
+}
+
+.start a {
+    font-size: var(--tito);
+    text-decoration: none;
+    color: rgb(42, 48, 33);
+}
+
+.animation {
+    animation: shake infinite;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.tabula {
+    display: none;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+    }
+    10%,
+    30% {
+        -webkit-transform: translateY(25px);
+    }
+    50% {
+        -webkit-transform: translateX(10px);
+    }
+    70% {
+        -webkit-transform: translateX(-15px);
+    }
+    90% {
+        -webkit-transform: translateY(-13px);
+    }
+    20%,
+    40% {
+        -webkit-transform: translateX(25px);
+    }
+    60% {
+        -webkit-transform: translateX(-20px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30% {
+        transform: translateY(25px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    70% {
+        transform: translateX(-15px);
+    }
+    90% {
+        transform: translateY(-13px);
+    }
+    20%,
+    40% {
+        transform: translateX(25px);
+    }
+    60% {
+        transform: translateX(-20px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+}
+
+.uno {
+    position: absolute;
+    top: 50vw;
+    left: 200vw;
+}
+
+.due {
+    position: absolute;
+    top: 400vw;
+    left: 900vw;
+}
+
+.tre {
+    position: absolute;
+    top: 200vw;
+    left: 300vw;
+}
+
+.quattro {
+    position: absolute;
+    top: 300vw;
+    left: 750vw;
+}
+
+.cinque {
+    position: absolute;
+    top: 20vw;
+    left: 800vw;
+}
+
+.sei {
+    position: absolute;
+    top: 400vw;
+    left: 100vw;
+}
+
+p,
+a {
+    font-size: var(--reg);
+    color: var(--lighter);
+    /* text-shadow: 10px 10px 4px rgba(51, 255, 0, 0.1) */
+}
+
+button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    margin: 0 .5vw;
+    min-width: 10vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 1vw;
+    padding: .5vw 1vw;
+    filter: drop-shadow(0 0 0.75rem var(--lighter));
+}
+
+.testa {
+    width: 100%;
+    /* border: solid 1px rebeccapurple; */
+    justify-content: space-between;
+    z-index: 300;
+    bottom: 0;
+    /* left: 10vw; */
+    /* height: 0; */
+    position: fixed;
+    display: flex;
+}
+
+.testa a {
+    text-decoration: none;
+    font-size: 4vw;
+    color: white;
+    filter: drop-shadow(0 0 2.75rem rgb(48, 82, 57));
+}
+
+a button {
+    font-family: 'commune';
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: var(--pink);
+}
+
+a2 button {
+    font-family: 'commune';
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: var(--pink);
+}
+
+.colophon {
+    display: none;
+    z-index: 400;
+    /* border: solid 1px green; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    color: var(--darker);
+    font-size: 10vw;
+    overflow-y: scroll;
+}
+
+.infracolo {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.colophon li,
+p,
+ul {
+    /* padding: 0; */
+    font-size: 5vw;
+    line-height: 4vw;
+    list-style: none;
+}
+
+.colophon p {
+    color: white;
+}
+
+.colophon ul {
+    color: var(--active);
+    line-height: .5vw;
+}
+
+.colophon button {
+    height: 99vh;
+    position: fixed;
+    font-family: 'commune';
+    width: 20vw;
+    font-size: 15vw;
+    line-height: 8vw;
+}
+
+.colotext div:nth-child(1) {
+    /* filter: drop-shadow(0 0 1.75rem var(--active)); */
+    animation: shake infinite;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    font-size: 17vw;
+    position: relative;
+    background-color: var(--active);
+    height: 10%;
+    /* position: fixed; */
+    /* z-index: 2; */
+}
+
+.colotext div:nth-child(1) span {
+    /* z-index: 1; */
+    /* height: 10%; */
+    border: white 2px solid;
+}
+
+.colotext {
+    border: solid white 3px;
+    overflow-y: scroll;
+    height: 100%;
+    width: 80%;
+    margin-bottom: 20%;
+}
+
+.colotext p,
+ul {
+    font-size: var(--reg);
+    line-height: var(--reg);
+    width: 50%;
+}
+
+.colotext ul {
+    width: 100%;
+}
+
+.menu a {
+    font-size: 6vw;
+    line-height: 5vw;
+}
+
+.menu {
+    width: 80%;
+    height: 80%;
+    /* background-color: rgba(175, 171, 171, 0.22); */
+    z-index: 300;
+    position: fixed;
+    display: inline;
+    top: 0;
+    font-size: var(--reg);
+    /* letter-spacing: 18px; */
+}
+
+.menuButton {
+    display: none;
+    position: fixed;
+    z-index: 300;
+    width: 15%;
+    left: 2vw;
+    bottom: 1.5vw;
+    filter: drop-shadow(0 0 0.75rem var(--lighter));
+}
+
+.mobile {
+    display: none;
+}
+
+.arr {
+    text-decoration: none;
+    display: block;
+    position: inherit;
+    bottom: 0;
+    /* border: solid red 1px; */
+    /* margin-bottom: 150px; */
+    /* position: relative; */
+    width: 20%;
+    margin-left: 40%;
+    filter: drop-shadow(0 0 1.75rem rgb(54, 80, 64))
+    /* height: 80px;  */
+}
+
+.arrow {
+    animation: shake infinite;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    font-size: 5vw;
+    z-index: 220;
+}
+
+.arrow span {
+    color: var(--darker);
+    font-size: 200%;
+}
+
+.arrow span:hover {
+    font-size: 300%;
+    color: var(--active);
+}
+
+.coloButton {
+    bottom: 3vw;
+    right: 3vw;
+    position: fixed;
+    z-index: 900;
+    height: 24vw;
+    font-size: 4vw;
+    line-height: 3vw;
+}
+
+.infDiv {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    z-index: 900;
+    background-image: linear-gradient(var(--active), var(--darker));
+}
+
+.infButton {
+    display: block;
+    position: absolute;
+    bottom: 5vw;
+    left: 17vw;
+    z-index: 400;
+    font-family: commune;
+    width: 13%;
+    height: 20%;
+}
+
+.infDiv button {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    height: 20%;
+    margin-top: .5vw;
+    font-size: 11vw;
+    color: var(--active);
+    font-family: commune;
+    z-index: 2;
+    /* margin:; */
+}
+
+.textCur {
+    overflow-y: scroll;
+    z-index: 1;
+    color: var(--darker);
+    line-height: 5vw;
+    position: fixed;
+    top: 25%;
+    width: 40%;
+    left: 45%;
+    height: 70%;
+    margin-top: 2%;
+    background-image: linear-gradient(var(--darker), var(--active));
+}
+
+@media only screen and (max-width: 600px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile button {
+        width: 100%;
+        height: 5%;
+        font-size: 7vw;
+        position: absolute;
+        bottom: 0;
+    }
+    body {
+        /* padding-right: 10px; */
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        line-height: 10%;
+        /* border: solid 1vh green; */
+    }
+    .box {
+        width: 100%;
+        min-height: 90vh;
+        /* border: solid 1px red; */
+        position: absolute;
+    }
+     :root {
+        --reg: 75px;
+    }
+    #logo {
+        display: none;
+        /* top: 5%; */
+        /* right: 15%; */
+    }
+    #logo2 {
+        width: 30%;
+        top: 5%;
+        right: 5%;
+    }
+    .frame {
+        border: 3vw var(--active) solid;
+    }
+    .vids {
+        flex-direction: column;
+    }
+    .colo {
+        height: auto;
+        display: block;
+        height: 40%;
+        width: 100%;
+        /* border: solid 2px red; */
+    }
+    .testini {
+        bottom: 0;
+        position: relative;
+        text-align: center;
+        /* padding: 10px 0 10px 0; */
+        /* width: 100%; */
+        z-index: 300;
+        /* margin: 10px 0; */
+    }
+    .testini span {
+        bottom: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .testini .tit {
+        line-height: 4vw;
+        font-size: 7vw;
+    }
+    .testini .info {
+        line-height: 3vw;
+        font-size: 4vw;
+    }
+    .testini .cred {
+        line-height: 4.5vw;
+        font-size: 5vw;
+        display: none;
+        max-height: 5vh;
+    }
+    iframe {
+        /* height: 100%; */
+        width: 100%;
+        /* border: solid; */
+    }
+    .testa {
+        z-index: 80;
+    }
+    .menuButton {
+        display: none;
+    }
+    .start {
+        height: 100vw;
+        margin-top: 10%;
+        line-height: 10px;
+        width: 75%;
+    }
+    .start p,
+    li {
+        font-size: 5vw;
+    }
+    .menu {
+        top: 0;
+        z-index: 300;
+        width: 100vw;
+        height: 80vh;
+        line-height: 27vw;
+    }
+    .menu a {
+        font-style: bold;
+        font-size: 15vw;
+        line-height: 10vw;
+        display: block;
+        position: inherit;
+        z-index: 80;
+    }
+    .coloButton {
+        bottom: 15px;
+        right: 20px;
+        position: fixed;
+        z-index: 900;
+        height: 25vh;
+        /* font-size: x; */
+        line-height: 15px;
+    }
+    .coloButton span {
+        font-size: 5vh;
+    }
+    .uno {
+        position: relative;
+        top: 50vw;
+        left: 200vw;
+    }
+    .due {
+        position: relative;
+        top: 400vw;
+        left: 900vw;
+    }
+    .tre {
+        position: relative;
+        top: 200vw;
+        left: 300vw;
+    }
+    .quattro {
+        position: relative;
+        top: 300vw;
+        left: 750vw;
+    }
+    .cinque {
+        position: relative;
+        top: 900vw;
+        left: 800vw;
+    }
+    .sei {
+        position: relative;
+        top: 300vw;
+        left: 100vw;
+    }
+    .titoloni {
+        position: unset;
+        height: unset;
+        margin: 1.5% 0 5% 0;
+        /* border: solid 1px blue; */
+    }
+    .titoloni p {
+        font-size: 70%;
+        line-height: 11vw;
+    }
+    .infracolo {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .colotext {
+        padding: 10px 20px;
+        height: 85%;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+    }
+    .colotext p {
+        font-size: 8vw;
+        line-height: 6vw;
+        width: 100%;
+    }
+    .colotext li {
+        /* margin: 0; */
+        font-size: 8vw;
+        line-height: 6vw;
+    }
+    .colophon button {
+        height: 15%;
+        bottom: 0;
+        font-size: 120px;
+        position: absolute;
+        padding: 40px 0;
+        /* width: 100%; */
+        width: 100%;
+        /* height: 25%; */
+    }
+    /* .colotext{
+        height: 120%;
+        border: solid red 2px
+    } */
+    ul {
+        margin: 0;
+    }
+    .textCur {
+        /* border-top: white 2px solid; */
+        width: 90%;
+        height: 30%;
+        left: 5%;
+        top: 0;
+        /* font-size: 3vw; */
+    }
+    .textCur p {
+        font-size: 10vw;
+        line-height: 7.5vw;
+    }
+    .colotext div:nth-child(1),
+    span {
+        /* height: 25%; */
+        padding-top: 110px;
+        font-size: 30vw;
+        height: 20%;
+    }
+    .arrow {
+        /* border: solid; */
+        line-height: 0;
+        z-index: 0;
+        /* /* position: absolute; */
+        /* bottom: 0; */
+        left: 0;
+        /* margin-bottom: 20px ; */
+        height: 20px;
+    }
+    .arrow span {
+        font-size: 18vw;
+        z-index: 220;
+    }
+}
