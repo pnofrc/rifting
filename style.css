@@ -16,8 +16,8 @@
                             --lighter: rgb(19, 6, 27);
                             --darker: #13051b;
                             --active: #4EF1AE;
-                            --tit: rgba(59, 53, 53, 0.308);
-                            --info: rgb(66, 64, 64);
+                            --tit: rgb(66, 64, 64);
+                            --info: rgba(59, 53, 53, 0.577);
                             --cred: rgb(19, 18, 18);
                         }
                         
@@ -58,10 +58,10 @@
                         #logo {
                             position: fixed;
                             z-index: 300;
-                            width: 15%;
+                            width: 12%;
                             right: 2vw;
                             bottom: 1vw;
-                            filter: drop-shadow(0 0 0.75rem var(--lighter));
+                            filter: drop-shadow(0 0 2.75rem rgb(45, 213, 107));
                         }
                         
                         #logo2 {
@@ -69,26 +69,16 @@
                             z-index: 300;
                             width: 15%;
                             right: 4vw;
-                            top: 6vw;
-                            filter: drop-shadow(0 0 0.75rem var(--lighter));
+                            top: 5vw;
+                            filter: drop-shadow(0 0 0.75rem rgb(45, 213, 107));
                         }
                         
                         iframe {
-                            /* margin-top: 2vw; */
-                            /* padding: 30px; */
+                            /* margin: 0; */
                             z-index: 200;
-                            /* border: 10px beige solid; */
                             border: none;
                             width: 45vw;
-                            /* height: 50vh; */
-                        }
-                        
-                        .dx iframe {
-                            max-height: 55%;
-                        }
-                        
-                        .sx iframe {
-                            max-height: 40%;
+                            max-height: 30vw;
                         }
                         
                         .desktop {
@@ -109,25 +99,24 @@
                             flex-direction: row;
                         }
                         
-                        .dx,
-                        .sx {
-                            /* border: solid; */
-                            max-height: 70vh;
+                        .colo {
+                            width: 45vw;
+                            height: 70%;
                             display: flex;
                             flex-direction: column;
                             margin: 0;
                             /* object-fit: contain; */
-                            /* justify-content: center; */
+                            /* justify-content: space-around */
                         }
                         
                         .titoloni {
                             /* border: solid 2px red; */
                             width: 100%;
-                            margin-top: 2.5vw;
-                            height: 6vw;
+                            margin: 2vw 0;
+                            height: 4vw;
                             position: relative;
                             /* border: solid; */
-                            padding-bottom: 8vw;
+                            /* padding-bottom: 8vw; */
                         }
                         
                         .box a {
@@ -143,14 +132,16 @@
                         }
                         
                         .testini {
+                            /* border: solid; */
                             display: flex;
                             flex-direction: column;
-                            height: 20vw;
-                            position: absolute;
-                            bottom: 9vw;
-                            padding: 3%;
+                            /* height: 25vw; */
+                            position: relative;
+                            /* bottom: 9vw; */
+                            /* padding: 3%; */
                             margin-bottom: 0;
-                            width: 50%;
+                            width: 80%;
+                            margin: 5% 10%;
                         }
                         
                         .testini span {
@@ -160,18 +151,23 @@
                         }
                         
                         .tit {
-                            font-size: 25px;
+                            font-size: 2vw;
+                            /* padding: 3px; */
                             color: var(--tit);
                         }
                         
-                        .infino {
-                            font-size: 10px;
+                        .info {
+                            font-size: 1vw;
                             color: var(--info);
                         }
                         
                         .cred {
-                            font-size: 15px;
+                            font-size: 1.2vw;
                             color: var(--cred);
+                        }
+                        
+                        span.cred {
+                            line-height: 1vw;
                         }
                         
                         .frame {
@@ -219,8 +215,8 @@
                         
                         .animation {
                             animation: shake infinite;
-                            -webkit-animation-duration: 2s;
-                            animation-duration: 2s;
+                            -webkit-animation-duration: 1s;
+                            animation-duration: 1s;
                         }
                         
                         .tabula {
@@ -234,16 +230,24 @@
                             }
                             10%,
                             30% {
-                                -webkit-transform: translateY(5px);
+                                -webkit-transform: translateY(25px);
                             }
-                            50%,
-                            70%,
+                            50% {
+                                -webkit-transform: translateX(10px);
+                            }
+                            70% {
+                                -webkit-transform: translateX(-15px);
+                            }
                             90% {
-                                -webkit-transform: translateX(-10px);
+                                -webkit-transform: translateY(-13px);
                             }
                             20%,
-                            40%,
-                            60%,
+                            40% {
+                                -webkit-transform: translateX(25px);
+                            }
+                            60% {
+                                -webkit-transform: translateX(-20px);
+                            }
                             80% {
                                 -webkit-transform: translateY(-10px);
                             }
@@ -256,16 +260,24 @@
                             }
                             10%,
                             30% {
-                                transform: translateY(5px);
+                                transform: translateY(25px);
                             }
-                            50%,
-                            70%,
+                            50% {
+                                transform: translateX(10px);
+                            }
+                            70% {
+                                transform: translateX(-15px);
+                            }
                             90% {
-                                transform: translateX(-10px);
+                                transform: translateY(-13px);
                             }
                             20%,
-                            40%,
-                            60%,
+                            40% {
+                                transform: translateX(25px);
+                            }
+                            60% {
+                                transform: translateX(-20px);
+                            }
                             80% {
                                 transform: translateY(-10px);
                             }
@@ -346,7 +358,7 @@
                             text-decoration: none;
                             font-size: 4vw;
                             color: white;
-                            /* filter: drop-shadow(0 0 1.75rem rgb(110, 191, 130)); */
+                            filter: drop-shadow(0 0 2.75rem rgb(48, 82, 57));
                         }
                         
                         a button {
@@ -373,6 +385,7 @@
                             background-color: black;
                             color: var(--darker);
                             font-size: 10vw;
+                            overflow-y: scroll;
                         }
                         
                         .infracolo {
@@ -383,8 +396,9 @@
                         .colophon li,
                         p,
                         ul {
+                            /* padding: 0; */
                             font-size: 5vw;
-                            line-height: 5vw;
+                            line-height: 4vw;
                             list-style: none;
                         }
                         
@@ -393,15 +407,55 @@
                         }
                         
                         .colophon ul {
-                            color: #0f0;
+                            color: var(--active);
                             line-height: .5vw;
                         }
                         
                         .colophon button {
                             height: 99vh;
+                            position: fixed;
                             font-family: 'commune';
-                            /* width: 500vw; */
+                            width: 20vw;
                             font-size: 15vw;
+                            line-height: 8vw;
+                        }
+                        
+                        .colotext div:nth-child(1) {
+                            /* filter: drop-shadow(0 0 1.75rem var(--active)); */
+                            animation: shake infinite;
+                            -webkit-animation-duration: 1s;
+                            animation-duration: 1s;
+                            font-size: 17vw;
+                            position: relative;
+                            background-color: var(--active);
+                            height: 10%;
+                            /* position: fixed; */
+                            /* z-index: 2; */
+                        }
+                        
+                        .colotext div:nth-child(1) span {
+                            /* z-index: 1; */
+                            /* height: 10%; */
+                            border: white 2px solid;
+                        }
+                        
+                        .colotext {
+                            border: solid white 3px;
+                            overflow-y: scroll;
+                            height: 100%;
+                            width: 80%;
+                            margin-bottom: 20%;
+                        }
+                        
+                        .colotext p,
+                        ul {
+                            font-size: var(--reg);
+                            line-height: var(--reg);
+                            width: 50%;
+                        }
+                        
+                        .colotext ul {
+                            width: 100%;
                         }
                         
                         .menu a {
@@ -439,29 +493,34 @@
                             text-decoration: none;
                             display: block;
                             position: relative;
-                            bottom: 30%;
-                        }
-                        
-                        .arr p:hover {
-                            color: var(--active);
+                            filter: drop-shadow(0 0 1.75rem rgb(54, 80, 64))
+                            /* height: 80px;  */
                         }
                         
                         .arrow {
+                            animation: shake infinite;
+                            -webkit-animation-duration: 1s;
+                            animation-duration: 1s;
+                            height: 50px;
                             position: relative;
                             text-align: center;
                             font-size: 5vw;
                             z-index: 220;
-                            /* margin-bottom: 10vw; */
                         }
                         
-                        .arrow p {
-                            color: white;
+                        .arrow span {
+                            color: var(--darker);
+                            font-size: 200%;
+                        }
+                        
+                        .arrow span:hover {
+                            font-size: 300%;
+                            color: var(--active);
                         }
                         
                         .coloButton {
-                            bottom: 0;
-                            right: 0;
-                            position: fixed;
+                            bottom: 3vw;
+                            right: 3vw;
                             position: fixed;
                             z-index: 900;
                             height: 24vw;
@@ -469,23 +528,59 @@
                             line-height: 3vw;
                         }
                         
-                        .info {
+                        .infDiv {
+                            display: none;
+                            position: fixed;
                             width: 100%;
                             height: 100%;
-                            position: fixed;
-                            background-color: white;
-                            z-index: 500;
+                            /* overflow-y: hidden; */
+                            overflow-x: hidden;
+                            z-index: 900;
+                            background-image: linear-gradient(var(--active), var(--darker));
                         }
                         
-                        .infoButton {
-                            display: none;
-                            position: relative;
+                        .infButton {
+                            display: block;
+                            position: absolute;
+                            bottom: 5vw;
+                            left: 17vw;
                             z-index: 400;
-                            bottom: 0;
-                            left: 10vw;
+                            font-family: commune;
+                            width: 13%;
+                            height: 20%;
+                        }
+                        
+                        .infDiv button {
+                            position: fixed;
+                            top: 0;
+                            width: 99%;
+                            height: 20%;
+                            margin-top: .5vw;
+                            font-size: 11vw;
+                            color: var(--active);
+                            font-family: commune;
+                            z-index: 2;
+                            /* margin:; */
+                        }
+                        
+                        .textCur {
+                            overflow-y: scroll;
+                            z-index: 1;
+                            color: var(--darker);
+                            line-height: 5vw;
+                            position: fixed;
+                            top: 25%;
+                            width: 40%;
+                            left: 45%;
+                            height: 70%;
+                            margin-top: 2%;
+                            background-image: linear-gradient(var(--darker), var(--active));
                         }
                         
                         @media only screen and (max-width: 600px) {
+                            .desktop {
+                                display: none;
+                            }
                             .mobile {
                                 display: flex;
                                 flex-direction: column;
@@ -507,63 +602,67 @@
                             }
                             .box {
                                 width: 100%;
-                                min-height: 100vh;
+                                min-height: 90vh;
                                 /* border: solid 1px red; */
                                 position: absolute;
                             }
                              :root {
                                 --reg: 75px;
                             }
-                            .colophon button {
-                                padding: 15px;
-                                width: 50%;
-                                font-size: 100px;
-                            }
                             #logo {
-                                width: 100px;
-                                top: 20px;
-                                right: 20px;
-                                /* filter: ; */
-                                filter: drop-shadow(0 0 0.75rem white)
+                                display: none;
+                                /* top: 5%; */
+                                /* right: 15%; */
+                            }
+                            #logo2 {
+                                width: 30%;
+                                top: 5%;
+                                right: 5%;
                             }
                             .frame {
-                                border: 3vw var(--lighter) solid;
+                                border: 3vw var(--active) solid;
                             }
                             .vids {
                                 flex-direction: column;
                             }
-                            .dx,
-                            .sx {
+                            .colo {
                                 height: auto;
                                 display: block;
                                 height: 40%;
+                                width: 100%;
                                 /* border: solid 2px red; */
                             }
                             .testini {
                                 bottom: 0;
                                 position: relative;
                                 text-align: center;
-                                padding-top: 10px;
-                                width: 100%;
+                                /* padding: 10px 0 10px 0; */
+                                /* width: 100%; */
+                                z-index: 300;
+                                /* margin: 10px 0; */
                             }
                             .testini span {
                                 bottom: 0;
                                 padding-top: 10px;
                                 text-align: center;
                             }
-                            .tit {
-                                font-size: 10vw;
-                            }
-                            .infino {
-                                font-size: 5vw;
-                            }
-                            .cred {
+                            .testini .tit {
+                                line-height: 4vw;
                                 font-size: 7vw;
                             }
+                            .testini .info {
+                                line-height: 3vw;
+                                font-size: 4vw;
+                            }
+                            .testini .cred {
+                                line-height: 4.5vw;
+                                font-size: 5vw;
+                                display: none;
+                            }
                             iframe {
-                                height: 100%;
-                                /* width: 100%; */
-                                border: solid;
+                                /* height: 100%; */
+                                width: 100%;
+                                /* border: solid; */
                             }
                             .testa {
                                 z-index: 80;
@@ -586,7 +685,7 @@
                                 z-index: 300;
                                 width: 100vw;
                                 height: 80vh;
-                                line-height: 30vw;
+                                line-height: 27vw;
                             }
                             .menu a {
                                 font-style: bold;
@@ -597,14 +696,16 @@
                                 z-index: 80;
                             }
                             .coloButton {
-                                /* text-orientation: sideways; */
                                 bottom: 15px;
                                 right: 20px;
                                 position: fixed;
                                 z-index: 900;
-                                height: 24vh;
-                                font-size: 20px;
+                                height: 25vh;
+                                /* font-size: x; */
                                 line-height: 15px;
+                            }
+                            .coloButton span {
+                                font-size: 5vh;
                             }
                             .uno {
                                 position: relative;
@@ -639,29 +740,83 @@
                             .titoloni {
                                 position: unset;
                                 height: unset;
-                                margin-top: 1vw;
+                                margin: 1.5% 0 5% 0;
                                 /* border: solid 1px blue; */
                             }
                             .titoloni p {
-                                font-size: 15vw;
+                                font-size: 70%;
                                 line-height: 11vw;
                             }
                             .infracolo {
                                 height: 100%;
                                 display: flex;
-                                flex-direction: column;
+                                flex-direction: row;
                             }
                             .colotext {
                                 padding: 10px 20px;
-                                height: 75%;
+                                height: 85%;
+                                width: 100%;
                                 position: absolute;
+                                top: 20%;
+                            }
+                            .colotext p {
+                                font-size: 8vw;
+                                line-height: 6vw;
+                                width: 100%;
+                            }
+                            .colotext li {
+                                /* margin: 0; */
+                                font-size: 8vw;
+                                line-height: 6vw;
                             }
                             .colophon button {
-                                height: 25%;
+                                height: 15%;
                                 bottom: 0;
+                                font-size: 120px;
                                 position: absolute;
+                                padding: 40px 0;
+                                /* width: 100%; */
                                 width: 100%;
-                                width: 100%;
-                                height: 25%;
+                                /* height: 25%; */
+                            }
+                            /* .colotext{
+                                height: 120%;
+                                border: solid red 2px
+                            } */
+                            ul {
+                                margin: 0;
+                            }
+                            .textCur {
+                                /* border-top: white 2px solid; */
+                                width: 90%;
+                                height: 30%;
+                                left: 5%;
+                                top: 0;
+                                /* font-size: 3vw; */
+                            }
+                            .textCur p {
+                                font-size: 10vw;
+                                line-height: 7.5vw;
+                            }
+                            .colotext div:nth-child(1),
+                            span {
+                                /* height: 25%; */
+                                padding-top: 110px;
+                                font-size: 30vw;
+                                height: 20%;
+                            }
+                            .arrow {
+                                /* border: solid; */
+                                line-height: 0;
+                                z-index: 0;
+                                /* /* position: absolute; */
+                                bottom: 0;
+                                left: 0%;
+                                /* margin-bottom: 20px ; */
+                                height: 20px;
+                            }
+                            .arrow span {
+                                font-size: 18vw;
+                                z-index: 220;
                             }
                         }
